@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_food"
+        android:name="com.example.menu_food_tracker.FoodFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_food" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.menu_food_tracker.ShoppingFragment"
+        android:label="@string/title_shop_list"
+        tools:layout="@layout/fragment_shopping" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.menu_food_tracker.MealPlanFragment"
+        android:label="@string/title_meal_plan"
+        tools:layout="@layout/fragment_meal_plan" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.menu_food_tracker.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings" />
+
+
+</navigation>
