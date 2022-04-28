@@ -21,4 +21,10 @@
     <string name="mealPlanString">Weekly Meal Plan</string>
     <string name="nextString">Next</string>
     <string name="PrevString">Prev</string>
+    <string name="noMealsBreakfast">No meals in Breakfast</string>
+    <string name="NoMealsDinner">No meals in Dinner</string>
+    <string name="NoMealsLunch">No meals in Lunch</string>
+    <string name="breakfastString">Breakfast</string>
+    <string name="dinnerString">Dinner</string>
+    <string name="addMeal">Add Meal</string>
 </resources>

@@ -148,6 +148,7 @@ public class MealPlanFragment extends Fragment{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(view.getContext(), EditDateMealPlan.class);
+
                 intent.putExtra("Date",days.get(position).getDate());
                 intent.putExtra("DayWeek", days.get(position).getDayOfWeek());
                 startActivity(intent);
