@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MealPlanFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/salmon_pink"
+        android:backgroundTintMode="add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/ic_account_circle_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="163dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/semibold"
+        android:text="@string/app_name"
+        android:textColor="@color/light_blue"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="This is the Meal Plan Fragment"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="-16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
