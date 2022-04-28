@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/background_white">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/salmon_pink"
+        android:drawableLeft="?attr/homeAsUpIndicator"
+        android:text="@string/back_button"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:onClick="goBackFood"
+        android:focusable="true"/>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/personalDetailsCard"
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        android:fadeScrollbars="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="15dp"
+        tools:context=".AddFoodActivity">
+
+        <LinearLayout
+            android:layout_width="361dp"
+            android:layout_height="305dp"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="306dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/semibold"
+                android:gravity="center_horizontal"
+                android:text="Add an item to Shopping List"
+                android:textColor="@color/light_blue"
+                android:textSize="20sp" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputFood_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/editFoodName_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/white_mint"
+                    android:drawableLeft="@drawable/ic_add_shopping_white"
+                    android:drawablePadding="10dp"
+                    android:hint="Food Name"
+                    android:singleLine="true"
+                    android:textSize="14dp" />/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputQuantity_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/editQuantity_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/white_mint"
+                    android:drawableLeft="@drawable/ic_quantity_white"
+                    android:drawablePadding="10dp"
+                    android:hint="Quantity"
+                    android:singleLine="true"
+                    android:textSize="14dp" />/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonAddShop"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="register_food"
+                android:text="Add"
+                android:backgroundTint = "@color/light_green"
+                android:textColor="@color/black"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</com.google.android.material.appbar.AppBarLayout>

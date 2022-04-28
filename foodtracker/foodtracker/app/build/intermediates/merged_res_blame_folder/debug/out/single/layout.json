@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/all_food_row_item.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/all_food_row_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_week_view.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_week_view.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_edit_date_meal_plan.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_edit_date_meal_plan.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_food.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_add_food.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/event_cell.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/event_cell.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_food.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_food.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/date_list_item.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/date_list_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/buy_list_row_item.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/buy_list_row_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_shopping_list.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_shopping_list.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_meal_plan.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_meal_plan.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_shopping.xml",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_shopping.xml"
+    }
+]

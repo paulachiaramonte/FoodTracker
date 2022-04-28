@@ -1,0 +1,115 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.foodtracker"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:5:5-31:19
+12        android:allowBackup="true"
+12-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] /Users/alejandropares/.gradle/caches/transforms-3/02483169c4c9e0ddffa88758188ac6f1/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/ic_launcher"
+16-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:7:9-43
+17        android:label="@string/app_name"
+17-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:8:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:9:9-54
+19        android:supportsRtl="true"
+19-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:10:9-35
+20        android:testOnly="true"
+21        android:theme="@style/Theme.Foodtracker.NoActionBar" >
+21-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:11:9-61
+22        <activity
+22-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:12:9-14:40
+23            android:name="com.example.foodtracker.EditDateMealPlan"
+23-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:13:13-45
+24            android:exported="false" />
+24-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:14:13-37
+25        <activity
+25-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:15:9-17:40
+26            android:name="com.example.foodtracker.AddFoodActivity"
+26-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:16:13-44
+27            android:exported="false" />
+27-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:17:13-37
+28        <activity
+28-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:18:9-20:40
+29            android:name="com.example.foodtracker.AddShoppingList"
+29-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:19:13-44
+30            android:exported="false" />
+30-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:20:13-37
+31        <activity
+31-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:21:9-30:20
+32            android:name="com.example.foodtracker.MainActivity"
+32-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:22:13-41
+33            android:exported="true"
+33-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:23:13-36
+34            android:label="@string/app_name" >
+34-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:24:13-45
+35            <intent-filter>
+35-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:25:13-29:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:26:17-69
+36-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:26:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:28:17-77
+38-->/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/AndroidManifest.xml:28:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <service
+42-->[androidx.room:room-runtime:2.5.0-alpha01] /Users/alejandropares/.gradle/caches/transforms-3/be7a66d258b846277742b6776c3c3a08/transformed/room-runtime-2.5.0-alpha01/AndroidManifest.xml:26:9-30:63
+43            android:name="androidx.room.MultiInstanceInvalidationService"
+43-->[androidx.room:room-runtime:2.5.0-alpha01] /Users/alejandropares/.gradle/caches/transforms-3/be7a66d258b846277742b6776c3c3a08/transformed/room-runtime-2.5.0-alpha01/AndroidManifest.xml:27:13-74
+44            android:directBootAware="true"
+44-->[androidx.room:room-runtime:2.5.0-alpha01] /Users/alejandropares/.gradle/caches/transforms-3/be7a66d258b846277742b6776c3c3a08/transformed/room-runtime-2.5.0-alpha01/AndroidManifest.xml:28:13-43
+45            android:exported="false" />
+45-->[androidx.room:room-runtime:2.5.0-alpha01] /Users/alejandropares/.gradle/caches/transforms-3/be7a66d258b846277742b6776c3c3a08/transformed/room-runtime-2.5.0-alpha01/AndroidManifest.xml:29:13-37
+46
+47        <provider
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+49            android:authorities="com.example.foodtracker.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/f1920f1d9631b904725b19a966861cf8/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/alejandropares/.gradle/caches/transforms-3/e2a4092d19f5ec1c3a53b27f970ef211/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/alejandropares/.gradle/caches/transforms-3/e2a4092d19f5ec1c3a53b27f970ef211/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/alejandropares/.gradle/caches/transforms-3/e2a4092d19f5ec1c3a53b27f970ef211/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+57        </provider>
+58
+59        <uses-library
+59-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+60            android:name="androidx.window.extensions"
+60-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+61            android:required="false" />
+61-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+62        <uses-library
+62-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+63            android:name="androidx.window.sidecar"
+63-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+64            android:required="false" />
+64-->[androidx.window:window:1.0.0] /Users/alejandropares/.gradle/caches/transforms-3/3c9a7f6f2fcbef61d050204e3a7ded45/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+65    </application>
+66
+67</manifest>

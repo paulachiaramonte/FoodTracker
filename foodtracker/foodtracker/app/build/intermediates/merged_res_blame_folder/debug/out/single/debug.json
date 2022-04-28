@@ -1,0 +1,406 @@
+[
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_egg_icon.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_egg_icon.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_category_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_category_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/menu/bottom_nav_menu.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_calendar_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_calendar_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_category_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_category_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_add_shopping_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_add_shopping_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_activity_shopping_list.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_shopping_list.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_activity_add_food.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_add_food.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_activity_edit_date_meal_plan.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_edit_date_meal_plan.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_all_food_row_item.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/all_food_row_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_quantity_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_quantity_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_egg_icon.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_egg_icon.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_fragment_meal_plan.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_meal_plan.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_layout_bg.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/layout_bg.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_food_icon_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_food_icon_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_checkbox_selector.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/checkbox_selector.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_meal_plan_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_meal_plan_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_date_list_item.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/date_list_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_activity_week_view.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_week_view.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_quantity_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_quantity_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_add_shopping_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_add_shopping_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_add_green_button.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_add_green_button.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_shopping_car_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_shopping_car_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_calendar_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_calendar_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_settings_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_settings_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_baseline_circle_check_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_baseline_circle_check_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_fragment_shopping.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_shopping.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_egg_alt.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_egg_alt.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_category_white.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_category_white.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_search_bg.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/search_bg.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_egg_alt.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_egg_alt.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_filter_list_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_filter_list_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_egg_alt.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_egg_alt.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_meal_plan_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_meal_plan_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_shopping_car_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_shopping_car_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_account_circle_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_account_circle_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_egg_icon.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_egg_icon.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_egg_alt.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_egg_alt.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_search_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_search_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_food_icon_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_food_icon_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_egg_icon.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_egg_icon.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_add_shopping_white.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_add_shopping_white.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_calendar_white.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_calendar_white.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_quantity_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_quantity_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_food_icon_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_food_icon_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_plus_white_button.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_plus_white_button.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_add_green_button.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_add_green_button.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_egg_alt.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_egg_alt.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_meal_plan_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_meal_plan_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_shopping_car_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_shopping_car_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_shopping_car_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_shopping_car_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable_ic_home_black_24dp.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_calendar_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xhdpi/ic_calendar_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_food_icon_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_food_icon_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_add_green_button.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_add_green_button.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/font_semibold.ttf.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/font/semibold.ttf"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_pineapple.jpeg.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/pineapple.jpeg"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_meal_plan_black.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_meal_plan_black.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable/ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_baseline_circle_button_unchecked_24.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_baseline_circle_button_unchecked_24.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/font_regular.ttf.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/font/regular.ttf"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_add_shopping_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_add_shopping_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_shopping_car_black.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_shopping_car_black.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_food_icon_black.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_food_icon_black.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_category_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_category_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/navigation_mobile_navigation.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/navigation/mobile_navigation.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_add_green_button.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_add_green_button.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_category_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_category_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_meal_plan_black.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-hdpi/ic_meal_plan_black.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_egg_icon.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_egg_icon.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_apple.jpeg.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/apple.jpeg"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_calendar_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_calendar_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_add_green_button.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_add_green_button.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_quantity_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-xxhdpi/ic_quantity_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_buy_list_row_item.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/buy_list_row_item.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_fragment_food.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_food.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_event_cell.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/event_cell.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_add_shopping_white.png.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-mdpi/ic_add_shopping_white.png"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/layout_fragment_settings.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/build/intermediates/merged_res/debug/drawable-anydpi_ic_quantity_white.xml.flat",
+        "source": "/Users/alejandropares/Downloads/FoodTracker-main/foodtracker/app/src/main/res/drawable-anydpi/ic_quantity_white.xml"
+    }
+]
