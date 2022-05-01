@@ -50,12 +50,13 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center|fill"
-            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
             android:text="@string/breakfastString"
             android:textColor="@color/white_mint"
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/ButtonAddBreakfast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"
@@ -112,6 +113,7 @@
             android:textColor="@color/white_mint"/>
 
         <Button
+            android:id="@+id/ButtonAddLunch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"
@@ -172,6 +174,7 @@
             android:textColor="@color/white_mint"/>
 
         <Button
+            android:id="@+id/ButtonAddDinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"

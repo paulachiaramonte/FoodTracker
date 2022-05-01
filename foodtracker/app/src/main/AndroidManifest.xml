@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodtracker.NoActionBar">
         <activity
+            android:name=".AddMeal"
+            android:exported="false" />
+        <activity
             android:name=".EditDateMealPlan"
             android:exported="false" />
         <activity

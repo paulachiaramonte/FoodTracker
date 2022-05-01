@@ -12,7 +12,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodtracker.database.AppDatabase;
+import com.example.foodtracker.database.ShoppingD;
+
 public class AddShoppingList extends AppCompatActivity {
+
+    private AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +66,11 @@ public class AddShoppingList extends AppCompatActivity {
                     });
             ad.show();
         } else {
+            db = AppDatabase.getInstance(getApplicationContext());
+            ShoppingD new_food = new ShoppingD(food_name,
+                    Integer.parseInt(food_quantity));
+            db.DAO().insertShopping(new_food);
+            setResult(RESULT_OK);
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }

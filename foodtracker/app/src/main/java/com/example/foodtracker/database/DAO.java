@@ -43,6 +43,22 @@ public interface DAO {
     @Insert
     void insertFoodD(FoodD food);
 
+
+    //SHOPPING TABLE
+    //Get expire date and food name from all instances
+    @Query("SELECT food FROM Shopping_table")
+    List<String> getFood_shop();
+
+    //Get quantity
+    @Query("SELECT quantity FROM Shopping_table")
+    List<Integer> getQuantity();
+
+    //Insert new food
+    @Insert
+    void insertShopping(ShoppingD food);
+
+
+
     //Delete food
     @Delete
     void delete(FoodD food);

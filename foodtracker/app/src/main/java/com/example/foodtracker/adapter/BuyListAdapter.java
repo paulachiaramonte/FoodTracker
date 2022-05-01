@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,7 +15,6 @@ import com.example.foodtracker.R;
 import com.example.foodtracker.model.BuyList;
 
 import java.util.List;
-
 
 
 public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodViewHolder> {
