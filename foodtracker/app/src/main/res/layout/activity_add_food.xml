@@ -95,14 +95,28 @@
                     android:singleLine="true"
                     android:textSize="14dp" />
 
-                <Button
-                    android:id="@+id/AddDate_Button"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:onClick="date_picker"
-                    android:text="Add Date"
-                    app:cardCornerRadius="16dp" />
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/AddDate_Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="date_picker"
+                        android:text="Add Date"
+                        app:cardCornerRadius="16dp" />
+
+                    <Button
+                        android:id="@+id/CheckDatesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="Don't Know?"
+                        android:backgroundTint="@color/salmon_pink"/>
+                </LinearLayout>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +124,15 @@
                 android:id="@+id/txtInputPlace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Place of Storage"
+                    android:paddingLeft="40dp"
+                    />
+
 
                 <Spinner
                     android:id="@+id/Spinner_Place_food"

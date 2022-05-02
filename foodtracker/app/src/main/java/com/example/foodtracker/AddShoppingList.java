@@ -29,7 +29,6 @@ public class AddShoppingList extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 register_shop();
-                successToast();
 
             }
         });
@@ -71,7 +70,9 @@ public class AddShoppingList extends AppCompatActivity {
                     Integer.parseInt(food_quantity));
             db.DAO().insertShopping(new_food);
             setResult(RESULT_OK);
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, ShoppingFragment.class);
+            intent.putExtra("intFragment", 2);
+            successToast();
             startActivity(intent);
         }
     }
@@ -87,6 +88,7 @@ public class AddShoppingList extends AppCompatActivity {
 
     public void goBackFood(View v){
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("intFragment", 2);
         startActivity(intent);
     }
 }

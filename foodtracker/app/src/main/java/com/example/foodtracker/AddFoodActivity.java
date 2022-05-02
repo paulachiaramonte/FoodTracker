@@ -24,7 +24,7 @@ import java.util.Calendar;
 public class AddFoodActivity extends AppCompatActivity {
 
     private AppDatabase db;
-    String[] places = {"pantry", "fridge", "freezer"};
+    String[] places = {"Fridge", "Freezer", "Pantry"};
 
 
     @Override
@@ -49,12 +49,20 @@ public class AddFoodActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.CheckDatesButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), CheckShelfLife.class);
+                startActivity(intent);
+
+            }
+        });
+
 
         findViewById((R.id.buttonAddFood)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 register_food();
-                successToast();
 
             }
         });
@@ -121,6 +129,8 @@ public class AddFoodActivity extends AppCompatActivity {
             db.DAO().insertFoodD(new_food);
             setResult(RESULT_OK);
             Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("intFragment", 1);
+            successToast();
             startActivity(intent);
         }
     }
@@ -136,6 +146,7 @@ public class AddFoodActivity extends AppCompatActivity {
 
     public void goBackFood(View v){
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("intFragment", 1);
         startActivity(intent);
     }
 }

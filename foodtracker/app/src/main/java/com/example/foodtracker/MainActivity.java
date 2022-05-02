@@ -20,14 +20,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.activity_main);
 
         // Bottom nav
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_container, new com.example.foodtracker.FoodFragment()).commit();
 
-        bottomNavigationView.setSelectedItemId(R.id.navigation_food);
+        Intent intentFragment = getIntent();
+
+        if (intentFragment.hasExtra("intFragment")){
+            int intFragment = intentFragment.getExtras().getInt("intFragment");
+            Fragment fragment = new com.example.foodtracker.FoodFragment();
+            switch (intFragment){
+                case 1: // Food Fragment
+                    fragment = new com.example.foodtracker.FoodFragment();
+                    break;
+                case 2: // Shopping List
+                    fragment = new com.example.foodtracker.ShoppingFragment();
+                    break;
+                case 3: // Meal Plan
+                    fragment = new com.example.foodtracker.MealPlanFragment();
+                    break;
+                case 4: // Settings
+                    fragment = new com.example.foodtracker.SettingsFragment();
+                    break;
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_container, fragment).commit();
+        }else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_container, new com.example.foodtracker.FoodFragment()).commit();
+            bottomNavigationView.setSelectedItemId(R.id.navigation_food);
+        }
 
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -55,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
     public void add_food(View v){
         Intent intent = new Intent(MainActivity.this, com.example.foodtracker.AddFoodActivity.class);

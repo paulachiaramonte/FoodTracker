@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FoodTracker</string>
     <string name="title_home">Food</string>
@@ -27,4 +28,6 @@
     <string name="breakfastString">Breakfast</string>
     <string name="dinnerString">Dinner</string>
     <string name="addMeal">Add Meal</string>
+
+
 </resources>
