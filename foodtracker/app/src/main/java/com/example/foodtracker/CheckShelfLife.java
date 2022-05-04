@@ -29,12 +29,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class CheckShelfLife extends AppCompatActivity {
 
     private EditText filterText = null;
     SearchFilterAdapter adapter = null;
+    SearchFilterAdapter urlAdapter = null;
+    private ArrayList<String> nameList;
+    private ArrayList<String> urlList;
+    ArrayList<String> nameListCopy;
+    private HashMap<String, Integer> dictFoodId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,14 +53,22 @@ public class CheckShelfLife extends AppCompatActivity {
         filterText.addTextChangedListener(filterTextWatcher);
 
         ListView listView = findViewById(R.id.listLinksApp);
-        ArrayList<String> nameList = new ArrayList<>();
-        ArrayList<String> urlList = new ArrayList<>();
+        nameList = new ArrayList<>();
+        urlList = new ArrayList<>();
+        dictFoodId = new HashMap<String, Integer>();
 
         adapter = new SearchFilterAdapter(getApplicationContext(),
                 R.layout.food_list_item,nameList);
 
+        urlAdapter = new SearchFilterAdapter(getApplicationContext(),
+                R.layout.food_list_item,urlList);
+
         listView.setTextFilterEnabled(true);
         listView.setAdapter(adapter);
+
+        RestClient foodDataBase = new RestClient(listView, adapter,urlAdapter,
+                nameList, urlList, dictFoodId);
+        foodDataBase.execute("https://shelf-life-api.herokuapp.com/search?");
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -61,14 +76,13 @@ public class CheckShelfLife extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView,
                                     View view, int pos, long id) {
                 Intent intent = new Intent(view.getContext(), WebPageActivity.class);
-
-                intent.putExtra("urlPage", urlList.get(pos));
+                int RealId = dictFoodId.get(adapter.getItem(pos));
+                Log.d("CheckShelfLife", "Pos= " + RealId);
+                intent.putExtra("urlPage", urlList.get(RealId));
                 startActivity(intent);
             }
         });
 
-        RestClient foodDataBase = new RestClient(listView, adapter,nameList, urlList);
-        foodDataBase.execute("https://shelf-life-api.herokuapp.com/search?");
 
 
     }

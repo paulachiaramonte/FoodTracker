@@ -21,11 +21,11 @@ import java.util.Locale;
 
 public class SearchFilterAdapter extends ArrayAdapter<String> {
 
-    private List<String> objects;
+    private ArrayList<String> objects;
     private Context context;
     private Filter filter;
 
-    public SearchFilterAdapter(Context context, int resourceId,	List<String> objects) {
+    public SearchFilterAdapter(Context context, int resourceId,	ArrayList<String> objects) {
         super(context, resourceId, objects);
         this.context = context;
         this.objects = objects;
@@ -34,6 +34,11 @@ public class SearchFilterAdapter extends ArrayAdapter<String> {
     @Override
     public int getCount() {
         return objects.size();
+    }
+
+    @Override
+    public String getItem(int position){
+        return objects.get(position);
     }
 
 

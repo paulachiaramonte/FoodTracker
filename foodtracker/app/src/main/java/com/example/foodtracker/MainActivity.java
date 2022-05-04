@@ -33,18 +33,23 @@ public class MainActivity extends AppCompatActivity {
             switch (intFragment){
                 case 1: // Food Fragment
                     fragment = new com.example.foodtracker.FoodFragment();
+                    bottomNavigationView.setSelectedItemId(R.id.navigation_food);
                     break;
                 case 2: // Shopping List
                     fragment = new com.example.foodtracker.ShoppingFragment();
+                    bottomNavigationView.setSelectedItemId(R.id.navigation_shopping);
                     break;
                 case 3: // Meal Plan
                     fragment = new com.example.foodtracker.MealPlanFragment();
+                    bottomNavigationView.setSelectedItemId(R.id.navigation_meal_plan);
                     break;
                 case 4: // Settings
                     fragment = new com.example.foodtracker.SettingsFragment();
+                    bottomNavigationView.setSelectedItemId(R.id.navigation_settings);
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.main_container, fragment).commit();
+
         }else{
             getSupportFragmentManager().beginTransaction().replace(R.id.main_container, new com.example.foodtracker.FoodFragment()).commit();
             bottomNavigationView.setSelectedItemId(R.id.navigation_food);

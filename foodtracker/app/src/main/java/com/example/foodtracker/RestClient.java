@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import com.example.foodtracker.model.FoodItem;
@@ -24,16 +25,21 @@ public class RestClient extends AsyncTask<String, Void, String> {
 
     private ListView listView;
     private ArrayAdapter arrayAdapter;
+    private ArrayAdapter urlAdapter;
     private List<String> nameList;
     private List<String> urlList;
+    private HashMap dictFoodId;
 
-    public RestClient(ListView listView, ArrayAdapter arrayAdapter,
-                      ArrayList nameList, ArrayList urlList)
+
+    public RestClient(ListView listView, ArrayAdapter arrayAdapter, ArrayAdapter urlAdapter,
+                      ArrayList nameList, ArrayList urlList, HashMap dictFoodId)
     {
         this.listView = listView;
         this.arrayAdapter = arrayAdapter;
+        this.urlAdapter = urlAdapter;
         this.nameList = nameList;
         this.urlList = urlList;
+        this.dictFoodId = dictFoodId;
     }
 
     @Override
@@ -64,12 +70,16 @@ public class RestClient extends AsyncTask<String, Void, String> {
 
         Gson gson = new Gson();
         FoodItem[] foodItems = gson.fromJson(result, FoodItem[].class);
-
+        int i = 0;
         for (FoodItem food : foodItems) {
             nameList.add(food.getName());
             urlList.add(food.getURL_food());
+            dictFoodId.put(food.getName(), i);
+            i += 1;
+
         }
         arrayAdapter.notifyDataSetChanged();
+        urlAdapter.notifyDataSetChanged();
 
     }
 

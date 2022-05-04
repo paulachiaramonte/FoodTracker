@@ -3,7 +3,7 @@ package com.example.foodtracker.model;
 public class FoodItem {
     public int id;
     public String name;
-    public String url_food;
+    public String url;
 
     public int getId() {
         return id;
@@ -21,10 +21,10 @@ public class FoodItem {
         this.name = name;
     }
 
-    public String getURL_food() { return url_food; }
+    public String getURL_food() { return url; }
 
-    public void setURL_food(String url_food) {
-        this.url_food = url_food;
+    public void setURL_food(String url) {
+        this.url = url;
     }
 
 }
