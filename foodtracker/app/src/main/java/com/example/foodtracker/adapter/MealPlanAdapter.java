@@ -19,6 +19,7 @@ public class MealPlanAdapter extends ArrayAdapter<MealDate> {
 
     Context mContext;
     int mResource;
+    ArrayList<MealDate> daysList;
 
     /**
      * Default constructor for the MealPlanAdapter

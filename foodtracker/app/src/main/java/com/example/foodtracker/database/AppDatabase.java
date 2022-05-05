@@ -9,7 +9,8 @@ import androidx.room.Room;
 
 @Database(entities = {
         FoodD.class,
-        ShoppingD.class}, version = 2)
+        ShoppingD.class,
+        MealPlanD.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String Database_name = "FoodTrackDB";
     private static volatile AppDatabase instance;

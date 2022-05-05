@@ -16,7 +16,7 @@ public interface DAO {
     List<FoodD> getAllFoodD();
 
     //Get a single food from its id
-    @Query("SELECT * FROM food_table WHERE id=:id")
+    @Query("SELECT * FROM Food_table WHERE id=:id")
     FoodD findById(long id);
 
     //Get list of foods from list of ids
@@ -59,8 +59,32 @@ public interface DAO {
 
 
 
+    //MEAL PLAN
+    //Get name
+    @Query("SELECT name FROM MealPlan_table")
+    List<String> getMeal_name();
+
+
+    //Get date
+    @Query("SELECT date FROM MealPlan_table")
+    List<String> getMeal_date();
+
+    //Get type
+    @Query("SELECT type FROM MealPlan_table")
+    List<String> getMeal_type();
+
+
+
+    //Insert new food
+    @Insert
+    void insertMealPlan(MealPlanD meal);
+
+
     //Delete food
     @Delete
     void delete(FoodD food);
+
+
+
 
 }

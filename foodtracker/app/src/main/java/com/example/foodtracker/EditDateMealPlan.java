@@ -10,7 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.foodtracker.database.AppDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class EditDateMealPlan extends AppCompatActivity {
+
+    AppDatabase db;
 
     //Intent intent = getIntent();
     //String date = intent.getStringExtra("Date");
@@ -36,6 +43,14 @@ public class EditDateMealPlan extends AppCompatActivity {
         Button buttonLunch = (Button) findViewById(R.id.ButtonAddLunch);
         Button buttonDinner = (Button) findViewById(R.id.ButtonAddDinner);
 
+        ListView ListViewBreakfast = findViewById(R.id.ListViewBreakfast);
+        ListView ListViewLunch = findViewById(R.id.ListViewLunch);
+        ListView ListViewDinner = findViewById(R.id.ListViewDinner);
+
+        db = AppDatabase.getInstance(this);
+        //por hacer
+        List<String> list_meals = db.DAO().getMeal_name();
+
 
         buttonBreakfast.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -60,6 +75,7 @@ public class EditDateMealPlan extends AppCompatActivity {
     }
 
     public void goActivityMeal(String meal, String date){
+
         Intent intent = new Intent(this, AddMeal.class);
         intent.putExtra("Date", date);
         intent.putExtra("Meal", meal);

@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodtracker.adapter.MealPlanAdapter;
+import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.model.MealDate;
 
 import java.text.DateFormat;
@@ -33,6 +34,7 @@ import java.text.DateFormatSymbols;
 import java.util.Locale;
 
 public class MealPlanFragment extends Fragment{
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
