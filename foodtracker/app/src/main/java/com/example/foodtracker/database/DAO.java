@@ -55,6 +55,10 @@ public interface DAO {
     @Insert
     void insertFoodD(FoodD food);
 
+    // Delete all rows from Food_table
+    @Query("DELETE FROM Food_table;")
+    public void DeleteAllFoodTable();
+
 
     //SHOPPING TABLE
     //Get expire date and food name from all instances
@@ -65,10 +69,20 @@ public interface DAO {
     @Query("SELECT quantity FROM Shopping_table")
     List<Integer> getQuantity();
 
+    //Get ID
+    @Query("SELECT id FROM Shopping_table")
+    List<Long> getID_shops();
+
+    @Query("DELETE FROM Shopping_table WHERE id = :foodId")
+    public void deleteShopFoodbyID(long foodId);
+
     //Insert new food
     @Insert
-    void insertShopping(ShoppingD food);
+    public void insertShopping(ShoppingD food);
 
+    // Delete all from Shopping_table
+    @Query("DELETE FROM Shopping_table")
+    public void deleteAllShoppingTable();
 
 
     //MEAL PLAN
@@ -95,6 +109,10 @@ public interface DAO {
     //Delete food
     @Delete
     void delete(FoodD food);
+
+    //Delete all Meal Plan
+    @Query("DELETE FROM MealPlan_table")
+    public void DeleteAllMealPlan();
 
 
 

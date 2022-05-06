@@ -15,6 +15,7 @@ import com.example.foodtracker.adapter.BuyListAdapter;
 import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.model.BuyList;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -36,9 +37,10 @@ public class ShoppingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_shopping,container,false);
 
-        List<BuyList> shoppingList = new ArrayList<>();
+        ArrayList<BuyList> shoppingList = new ArrayList<BuyList>();
 
         db = AppDatabase.getInstance(getContext());
+        List<Long> all_ids_shops = db.DAO().getID_shops();
         List<String> all_food = db.DAO().getFood_shop();
         List<Integer> all_quant = db.DAO().getQuantity();
 
@@ -54,10 +56,11 @@ public class ShoppingFragment extends Fragment {
         shoppingList.add(new BuyList("Buy 2" , 2));
         shoppingList.add(new BuyList("Buy 3" , 17));
 */
+        Iterator<Long> it0 = all_ids_shops.iterator();
         Iterator<String> it1 = all_food.iterator();
         Iterator<Integer> it2 = all_quant.iterator();
         while (it1.hasNext() && it2.hasNext()) {
-            shoppingList.add(new BuyList(it1.next(), it2.next()));
+            shoppingList.add(new BuyList(it0.next(),it1.next(), it2.next()));
 
             shoppingRecycler = view.findViewById(R.id.shopping_recycler);
             BuyListAdapter buyListAdapter = new BuyListAdapter(getContext(), shoppingList);
@@ -66,6 +69,7 @@ public class ShoppingFragment extends Fragment {
             shoppingRecycler.setLayoutManager(linearLayoutManager);
             shoppingRecycler.setAdapter(buyListAdapter);
         }
+
         return view;
     }
 }
