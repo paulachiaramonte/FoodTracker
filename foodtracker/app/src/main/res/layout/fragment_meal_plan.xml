@@ -104,17 +104,6 @@
                 android:layout_gravity="center"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/CurrentWeekButton"
-                    android:layout_width="143dp"
-                    android:layout_height="33dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/salmon_pink"
-                    android:gravity="center"
-                    android:text="Current Week"
-                    android:textColor="@color/white_mint"
-                    android:textSize="10sp" />
-
                 <ListView
                     android:id="@+id/DatesListView"
                     android:layout_width="wrap_content"

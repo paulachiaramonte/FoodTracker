@@ -28,6 +28,21 @@
     <string name="breakfastString">Breakfast</string>
     <string name="dinnerString">Dinner</string>
     <string name="addMeal">Add Meal</string>
+    <string name="titleAddShopping">Add an item to Shopping List</string>
+    <string name="FoodNameString">Food Name</string>
+    <string name="AddButton">Add</string>
+    <string name="QuantityString">Quantity</string>
+    <string name="AddItemFood">Add an item to Food</string>
+    <string name="DateExpString">Date of Expiration</string>
+    <string name="AddDateString">Add Date</string>
+    <string name="DontKnowString">Don\'t Know?</string>
+    <string name="PlaceString">Place of Storage</string>
+    <string name="DateString">Date</string>
+    <string name="SearchBarHintString">Find Food Here</string>
+    <string name="MealPlanFor">Meal Plan for</string>
+    <string name="LunchString">Lunch</string>
+    <string name="PreviousStr">Prev</string>
+    <string name="PlusStr">+</string>
 
 
 </resources>

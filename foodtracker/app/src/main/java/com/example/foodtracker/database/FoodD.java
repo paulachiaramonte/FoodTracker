@@ -4,6 +4,13 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import androidx.room.TypeConverters;
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 @Entity(tableName = "Food_table")
 public class FoodD {
@@ -24,12 +31,24 @@ public class FoodD {
     @ColumnInfo(name = "quantity")
     public int quantity;
 
+    @ColumnInfo(name="expDate")
+    @TypeConverters(Converters.class)
+    public Date expDate;
+
     public FoodD(long id, String food, String place, String expire, int quantity){
         this.id = id;
         this.food = food;
         this.place = place;
         this.expire = expire;
         this.quantity = quantity;
+
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.expDate = (Date) format.parse(expire);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Ignore
@@ -38,6 +57,13 @@ public class FoodD {
         this.place = place;
         this.expire = expire;
         this.quantity = quantity;
+
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.expDate = (Date) format.parse(expire);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     //Getters and setters
@@ -73,4 +99,9 @@ public class FoodD {
         this.quantity = quantity;
     }
 
+    public Date getExpDate(){
+        return expDate;
+    }
+
 }
+

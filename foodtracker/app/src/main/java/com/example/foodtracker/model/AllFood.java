@@ -1,16 +1,19 @@
 package com.example.foodtracker.model;
 
+import android.content.Intent;
+
 public class AllFood {
 
     String name;
     String exp;
-    //Integer imageUrl;
+    String place;
+    Integer quantity;
 
-
-    public AllFood(String name, String exp /*Integer imageUrl*/) {
+    public AllFood(String name, String exp, String place, Integer quantity) {
         this.name = name;
         this.exp = exp;
-        //this.imageUrl = imageUrl;         not for now
+        this.place = place;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -29,10 +32,20 @@ public class AllFood {
         this.exp = exp;
     }
 
-    /* public Integer getImageUrl() {
-        return imageUrl;
+    public String getPlace() {
+        return place;
     }
-    public void setImageUrl(Integer imageUrl) {
-        this.imageUrl = imageUrl;
-    }*/
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
 }

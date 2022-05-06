@@ -14,28 +14,31 @@
         android:orientation="horizontal"
         android:background="@drawable/search_box">
 
+        <Button
+            android:id="@+id/SearchFoodDatesButton"
+            android:layout_width="59dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/blue_grey"
+            android:drawableEnd="@drawable/ic_search_white"
+            android:elevation="40dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColorHint="@android:color/darker_gray"
+            android:translationZ="40dp" />
+
         <EditText
             android:id="@+id/EditTextSearch"
             android:layout_width="319dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:hint="Find Food Here"
+            android:hint="@string/SearchBarHintString"
             android:padding="10dp"
-            android:textColorHint="@android:color/darker_gray"/>
-
-        <Button
-            android:id="@+id/SearchFoodDatesButton"
-            android:layout_width="57dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/blue_grey"
-            android:drawableEnd="@drawable/ic_search_white"
-            android:gravity="center"
-            android:padding="16dp"
             android:textColorHint="@android:color/darker_gray"
-            android:elevation="40dp"
-            android:translationZ="40dp" />
+            android:autofillHints="" />
+
+
     </LinearLayout>
 
 
@@ -48,8 +51,6 @@
         android:textSize="20sp"
         android:visibility='gone'
         android:layout_gravity="center"/>
-
-
 
     <ListView
         android:id="@+id/listLinksApp"

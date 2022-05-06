@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Date"
+        android:text="@string/DateString"
         android:textSize="20sp" />
 
 
@@ -25,9 +25,17 @@
         android:text="Meal"
         android:textSize="20sp" />
 
-        <ListView
-            android:id="@+id/listLinksApp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+    <EditText
+        android:id="@+id/MealNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/FoodNameString"
+        />
+
+    <Button
+        android:id="@+id/AddNameMealButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addMeal"/>
 
     </LinearLayout>

@@ -52,7 +52,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/semibold"
                 android:gravity="center_horizontal"
-                android:text="Add an item to Shopping List"
+                android:text="@string/titleAddShopping"
                 android:textColor="@color/light_blue"
                 android:textSize="20sp" />
 
@@ -69,11 +69,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_add_shopping_white"
+                    android:drawableStart="@drawable/ic_add_shopping_white"
                     android:drawablePadding="10dp"
-                    android:hint="Food Name"
+                    android:hint="@string/FoodNameString"
                     android:singleLine="true"
-                    android:textSize="14dp" />/>
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:autofillHints="" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,11 +90,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_quantity_white"
+                    android:drawableStart="@drawable/ic_quantity_white"
                     android:drawablePadding="10dp"
-                    android:hint="Quantity"
+                    android:hint="@string/QuantityString"
                     android:singleLine="true"
-                    android:textSize="14dp" />/>
+                    android:textSize="14sp"
+                    android:inputType="number"
+                    android:autofillHints="" />
         </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -101,12 +105,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:clickable="true"
-                android:onClick="register_food"
-                android:text="Add"
+                android:text="@string/AddButton"
                 android:backgroundTint = "@color/light_green"
                 android:textColor="@color/black"
                 app:cardCornerRadius="16dp"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:focusable="true" />
         </LinearLayout>
 
 

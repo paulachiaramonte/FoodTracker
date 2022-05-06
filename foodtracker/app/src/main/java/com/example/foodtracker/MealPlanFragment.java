@@ -41,7 +41,6 @@ public class MealPlanFragment extends Fragment{
 
         Button buttonPrev = view.findViewById(R.id.ButtonPreviousWeek);
         Button buttonNext = view.findViewById(R.id.ButtonNextWeek);
-        Button buttonCurrent = view.findViewById(R.id.CurrentWeekButton);
 
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         DateFormat formatDayWeek = new SimpleDateFormat("EEEE");
@@ -119,29 +118,6 @@ public class MealPlanFragment extends Fragment{
                 listDates.setAdapter(adapter);
             }
 
-        });
-
-        buttonCurrent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calendar.set(Calendar.MONTH, currentMonth);
-                calendar.set(Calendar.DAY_OF_MONTH, currentDay);
-
-                calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-
-                for (int i = 0; i < 7; i++) {
-                    String date_value = format.format(calendar.getTime());
-                    int dayOfWeek_int = calendar.get(Calendar.DAY_OF_WEEK);
-                    String nameOfDay = weekdays[dayOfWeek_int];
-                    MealDate dateI = new MealDate(date_value, nameOfDay);
-                    days.set(i, dateI);
-
-                    calendar.add(Calendar.DAY_OF_MONTH, 1);
-                }
-                calendar.add(Calendar.DATE, -7);
-                MealPlanAdapter adapter = new MealPlanAdapter(view.getContext(), R.layout.date_list_item, days);
-                listDates.setAdapter(adapter);
-            }
         });
 
         listDates.setOnItemClickListener(new AdapterView.OnItemClickListener(){

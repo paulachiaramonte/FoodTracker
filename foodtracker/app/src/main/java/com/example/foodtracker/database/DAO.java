@@ -12,7 +12,7 @@ import java.util.List;
 public interface DAO {
 
     //Get all foods from the database
-    @Query("SELECT * FROM Food_table")
+    @Query("SELECT * FROM Food_table ORDER BY expDate")
     List<FoodD> getAllFoodD();
 
     //Get a single food from its id
@@ -24,20 +24,32 @@ public interface DAO {
     List<FoodD> loadAllByIds(long[] foodsIds);
 
     //Get expire date and food name from all instances
-    @Query("SELECT food FROM Food_table")
+    @Query("SELECT food FROM Food_table ORDER BY expDate")
     List<String> getFoodN();
 
     //Get expire date from all instances
-    @Query("SELECT expire FROM Food_table")
+    @Query("SELECT expire FROM Food_table ORDER BY expDate")
     List<String> getExp();
 
+    @Query("SELECT place FROM Food_table ORDER BY expDate")
+    List<String> getPlace();
+
+    @Query("SELECT quantity FROM Food_table ORDER BY expDate")
+    List<Integer> getQuant();
+
     //Get expire date and food name from a specific place(pantry, freezer, fridge)
-    @Query("SELECT food FROM Food_table WHERE place= :place")
+    @Query("SELECT food FROM Food_table WHERE place= :place ORDER BY expDate")
     List<String> getFood_place(String place);
 
     //Get expire date and food name from a specific place(pantry, freezer, fridge)
-    @Query("SELECT expire FROM Food_table WHERE place= :place")
+    @Query("SELECT expire FROM Food_table WHERE place= :place ORDER BY expDate")
     List<String> getExp_place(String place);
+
+    @Query("SELECT place FROM Food_table WHERE place= :place ORDER BY expDate")
+    List<String> getPlace_place(String place);
+
+    @Query("SELECT quantity FROM Food_table WHERE place= :place ORDER BY expDate")
+    List<Integer> getQuantity_place(String place);
 
     //Insert new food
     @Insert
@@ -56,8 +68,6 @@ public interface DAO {
     //Insert new food
     @Insert
     void insertShopping(ShoppingD food);
-
-
 
     //Delete food
     @Delete

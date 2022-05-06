@@ -19,7 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.database.FoodD;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class AddFoodActivity extends AppCompatActivity {
 
@@ -69,7 +72,6 @@ public class AddFoodActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -89,8 +91,7 @@ public class AddFoodActivity extends AppCompatActivity {
         DatePickerDialog datePickerDialog = new DatePickerDialog(this,
                 (view, year, monthOfYear, dayOfMonth) -> {
                     EditText txtDate = findViewById(R.id.editDateExpiration_food);
-                    txtDate.setText(dayOfMonth + "/" + (monthOfYear + 1) +
-                            "/" + year);
+                    txtDate.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
                 }, mYear, mMonth, mDay);
         datePickerDialog.show();
     }
@@ -103,7 +104,6 @@ public class AddFoodActivity extends AppCompatActivity {
         EditText EditFoodName = findViewById(R.id.editFoodName_food);
         EditText EditDateExp = findViewById(R.id.editDateExpiration_food);
         EditText EditQuantity = findViewById(R.id.editTextQuantity_food);
-
 
         String food = EditFoodName.getText().toString();
         String expire = EditDateExp.getText().toString();

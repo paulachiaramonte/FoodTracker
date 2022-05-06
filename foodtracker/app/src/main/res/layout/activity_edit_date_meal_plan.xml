@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Meal Plan for"
+        android:text="@string/MealPlanFor"
         android:textColor="@color/dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,17 +50,18 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center|fill"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:text="@string/breakfastString"
             android:textColor="@color/white_mint"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
 
         <Button
             android:id="@+id/ButtonAddBreakfast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="@string/addMeal"
             android:backgroundTint="@color/light_green"/>
@@ -107,17 +108,18 @@
             android:id="@+id/TextViewLunch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:text="Lunch"
+            android:paddingStart="20dp"
+            android:text="@string/LunchString"
             android:textSize="20sp"
-            android:textColor="@color/white_mint"/>
+            android:textColor="@color/white_mint"
+            tools:ignore="RtlSymmetry" />
 
         <Button
             android:id="@+id/ButtonAddLunch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="@string/addMeal"
             android:backgroundTint="@color/light_green"/>
@@ -168,7 +170,7 @@
             android:id="@+id/TextViewDinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:text="@string/dinnerString"
             android:textSize="20sp"
             android:textColor="@color/white_mint"/>
@@ -178,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|fill"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="@string/addMeal"
             android:backgroundTint="@color/light_green"/>

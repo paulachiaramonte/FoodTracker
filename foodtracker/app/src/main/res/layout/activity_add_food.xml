@@ -53,7 +53,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/semibold"
                 android:gravity="center_horizontal"
-                android:text="Add an item to Food"
+                android:text="@string/AddItemFood"
                 android:textColor="@color/light_blue"
                 android:textSize="24sp" />
 
@@ -69,11 +69,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_plus_white_button"
+                    android:drawableStart="@drawable/ic_plus_white_button"
                     android:drawablePadding="10dp"
-                    android:hint="Food Name"
+                    android:hint="@string/FoodNameString"
                     android:singleLine="true"
-                    android:textSize="14dp" />/>
+                    android:textSize="14sp"
+                    android:inputType="text"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,12 +89,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_calendar_white"
+                    android:drawableStart="@drawable/ic_calendar_white"
                     android:drawablePadding="10dp"
-                    android:hint="Date of Expiration"
+                    android:hint="@string/DateExpString"
                     android:inputType="date"
                     android:singleLine="true"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -104,17 +105,16 @@
                         android:id="@+id/AddDate_Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:onClick="date_picker"
-                        android:text="Add Date"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/AddDateString"
                         app:cardCornerRadius="16dp" />
 
                     <Button
                         android:id="@+id/CheckDatesButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:text="Don't Know?"
+                        android:layout_marginStart="50dp"
+                        android:text="@string/DontKnowString"
                         android:backgroundTint="@color/salmon_pink"/>
                 </LinearLayout>
 
@@ -129,21 +129,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Place of Storage"
-                    android:paddingLeft="40dp"
-                    />
-
+                    android:text="@string/PlaceString"
+                    android:paddingStart="40dp"
+                    tools:ignore="RtlSymmetry" />
 
                 <Spinner
                     android:id="@+id/Spinner_Place_food"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_category_white"
+                    android:drawableStart="@drawable/ic_category_white"
                     android:drawablePadding="10dp"
-                    android:hint="Place"
                     android:singleLine="true"
-                    android:textSize="14dp"> </Spinner>
+                    android:textSize="14sp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,12 +156,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/white_mint"
-                    android:drawableLeft="@drawable/ic_quantity_white"
+                    android:drawableStart="@drawable/ic_quantity_white"
                     android:drawablePadding="10dp"
-                    android:hint="Quantity"
+                    android:hint="@string/QuantityString"
                     android:inputType="number"
                     android:singleLine="true"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -174,10 +173,11 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/light_green"
                 android:clickable="true"
-                android:onClick="register_food"
-                android:text="Add"
+                android:text="@string/AddButton"
                 android:textColor="@color/black"
-                app:cardCornerRadius="16dp" />
+                app:cardCornerRadius="16dp"
+                android:focusable="true" />
+
         </LinearLayout>
 
 
