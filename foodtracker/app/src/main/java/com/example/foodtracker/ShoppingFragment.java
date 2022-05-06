@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,7 +30,6 @@ public class ShoppingFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,6 +42,13 @@ public class ShoppingFragment extends Fragment {
         List<String> all_food = db.DAO().getFood_shop();
         List<Integer> all_quant = db.DAO().getQuantity();
 
+        ImageView emptyFoodImage = view.findViewById(R.id.imageEmptyShop);
+        TextView emptyFoodTextView = view.findViewById(R.id.TextViewEmptyShop);
+
+        if (all_food.size() == 0){
+            emptyFoodImage.setVisibility(view.VISIBLE);
+            emptyFoodTextView.setVisibility(view.VISIBLE);
+        }
 /*
         shoppingList.add(new BuyList("Buy 1" , 1));
         shoppingList.add(new BuyList("Buy 2" , 2));
@@ -50,7 +58,6 @@ public class ShoppingFragment extends Fragment {
         Iterator<Integer> it2 = all_quant.iterator();
         while (it1.hasNext() && it2.hasNext()) {
             shoppingList.add(new BuyList(it1.next(), it2.next()));
-
 
             shoppingRecycler = view.findViewById(R.id.shopping_recycler);
             BuyListAdapter buyListAdapter = new BuyListAdapter(getContext(), shoppingList);

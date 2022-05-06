@@ -71,7 +71,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="414dp"
-        android:layout_height="611dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/layout_bg"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,11 +88,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="horizontal">
+            app:layout_constraintTop_toTopOf="parent">
 
             <Button
                 android:id="@+id/Allbutton"
@@ -136,9 +136,9 @@
                 android:id="@+id/FreezerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/semibold"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="1dp"
+                android:fontFamily="@font/semibold"
                 android:text="@string/freezer"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp" />
@@ -165,7 +165,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="132dp"
+            android:layout_marginBottom="24dp"
             android:backgroundTint="#51CB20"
             android:backgroundTintMode="add"
             android:clickable="true"
@@ -174,6 +174,35 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:maxImageSize="40dp" />
+
+        <ImageView
+            android:id="@+id/imageEmptyFood"
+            android:layout_width="133dp"
+            android:layout_height="164dp"
+            android:maxWidth="30dp"
+            android:maxHeight="30dp"
+            android:src="@drawable/empty_food"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEmptyFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="No items in food found..."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageEmptyFood"
+            android:visibility="gone"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

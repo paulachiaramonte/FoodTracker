@@ -70,7 +70,8 @@
                     android:text="@string/PrevString"
                     android:textColor="@color/white_mint"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/semibold"/>
 
 
                 <TextView
@@ -94,7 +95,8 @@
                     android:text="@string/nextString"
                     android:textColor="@color/white_mint"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/semibold"/>
 
             </LinearLayout>
 

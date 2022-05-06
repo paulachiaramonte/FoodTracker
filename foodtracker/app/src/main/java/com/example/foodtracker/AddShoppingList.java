@@ -70,7 +70,7 @@ public class AddShoppingList extends AppCompatActivity {
                     Integer.parseInt(food_quantity));
             db.DAO().insertShopping(new_food);
             setResult(RESULT_OK);
-            Intent intent = new Intent(this, ShoppingFragment.class);
+            Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("intFragment", 2);
             successToast();
             startActivity(intent);

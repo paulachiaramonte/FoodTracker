@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -48,6 +50,14 @@ public class FoodFragment extends Fragment{
         allFoodAdapter = new AllFoodAdapter(getContext(), allFoodList);
         foodRecycler.setLayoutManager(linearLayoutManager);
         foodRecycler.setAdapter(allFoodAdapter);
+
+        ImageView emptyFoodImage = view.findViewById(R.id.imageEmptyFood);
+        TextView emptyFoodTextView = view.findViewById(R.id.TextViewEmptyFood);
+
+        if (allFoodList.size() == 0){
+            emptyFoodImage.setVisibility(view.VISIBLE);
+            emptyFoodTextView.setVisibility(view.VISIBLE);
+        }
 
         //Get buttons
         All = view.findViewById(R.id.Allbutton);
