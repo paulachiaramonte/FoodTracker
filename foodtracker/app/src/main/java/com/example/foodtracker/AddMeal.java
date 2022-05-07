@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,6 +35,13 @@ public class AddMeal extends AppCompatActivity {
 
         tvDate.setText(bundle.getString("Date"));
         tvMeal.setText(bundle.getString("Meal"));
+        Button button = findViewById(R.id.AddNameMealButton);
+        button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                register_mealPlan();
+            }
+        });
     }
 
     private void register_mealPlan(){
@@ -66,18 +75,12 @@ public class AddMeal extends AppCompatActivity {
                     meal_type, meal_name);
             db.DAO().insertMealPlan(new_meal);
             setResult(RESULT_OK);
-            Intent intent = new Intent(this, MealPlanFragment.class);
-            intent.putExtra("intFragment", 2);
-            successToast();
+            Intent intent = new Intent(this, EditDateMealPlan.class);
+            intent.putExtra("Date", meal_date);
+            intent.putExtra("Meal", meal_type);
+            //successToast();
             startActivity(intent);
         }
     }
-    private void successToast() {
-        EditText EditFoodName = findViewById(R.id.editFoodName_shop);
-        String food_name = EditFoodName.getText().toString();
-        String message = getResources().getString(R.string.success_shop);
-        String message_toast = food_name + " " + message;
-        Toast.makeText(this.getApplicationContext(), message_toast,
-                Toast.LENGTH_LONG).show();
-    }
+
 }

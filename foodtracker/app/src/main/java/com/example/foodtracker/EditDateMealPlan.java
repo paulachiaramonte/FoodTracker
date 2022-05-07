@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -13,6 +16,7 @@ import android.widget.TextView;
 import com.example.foodtracker.database.AppDatabase;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class EditDateMealPlan extends AppCompatActivity {
@@ -43,13 +47,49 @@ public class EditDateMealPlan extends AppCompatActivity {
         Button buttonLunch = (Button) findViewById(R.id.ButtonAddLunch);
         Button buttonDinner = (Button) findViewById(R.id.ButtonAddDinner);
 
-        ListView ListViewBreakfast = findViewById(R.id.ListViewBreakfast);
-        ListView ListViewLunch = findViewById(R.id.ListViewLunch);
-        ListView ListViewDinner = findViewById(R.id.ListViewDinner);
+
 
         db = AppDatabase.getInstance(this);
         //por hacer
-        List<String> list_meals = db.DAO().getMeal_name();
+
+
+
+        View view = (ViewGroup) getLayoutInflater().inflate(R.layout.activity_edit_date_meal_plan, null);
+        //Loop
+
+        String breakfast = "Breakfast";
+        List<String> breakfast_meals = db.DAO().getName_Meal(dateString, breakfast);
+
+        TextView emptyFoodBreakfast = findViewById(R.id.TextNoBreakfast);
+        if(breakfast_meals.size() >0){
+            emptyFoodBreakfast.setVisibility(View.GONE);
+        }
+
+        String lunch = "Lunch";
+        List<String> lunch_meals = db.DAO().getName_Meal(dateString, lunch);
+        Log.d("prueba todo bien siuuuuuuuuu","Size"+lunch_meals.size());
+
+        TextView emptyFoodLunch = findViewById(R.id.TextNoLunch);
+        if(lunch_meals.size() >0){
+            emptyFoodLunch.setVisibility(View.GONE);
+        }
+
+        String dinner = "Dinner";
+        List<String> dinner_meals = db.DAO().getName_Meal(dateString, dinner);
+
+        ListView list_dinner = findViewById(R.id.ListViewDinner);
+
+
+        TextView emptyFoodDinner = view.findViewById(R.id.TextNoDinner);
+        if(dinner_meals.size() >0){
+            emptyFoodDinner.setVisibility(View.GONE);
+        }
+
+
+
+
+
+
 
 
         buttonBreakfast.setOnClickListener(new View.OnClickListener(){

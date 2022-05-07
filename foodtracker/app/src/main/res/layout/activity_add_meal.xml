@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AddMeal"
+        tools:context=".MealPlanFragment"
         android:orientation="vertical">
 
     <TextView
@@ -36,6 +36,6 @@
         android:id="@+id/AddNameMealButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/addMeal"/>
+        android:text="@string/addMeal" />
 
-    </LinearLayout>
+</LinearLayout>

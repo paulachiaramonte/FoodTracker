@@ -94,7 +94,8 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"/>
+                android:paddingBottom="8dp"
+                android:visibility="visible"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -163,7 +164,8 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"/>
+                android:paddingBottom="8dp"
+                android:visibility="visible"/>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -233,7 +235,8 @@
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:paddingTop="8dp"
-                android:paddingBottom="8dp"/>
+                android:paddingBottom="8dp"
+                android:visibility="visible"/>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">

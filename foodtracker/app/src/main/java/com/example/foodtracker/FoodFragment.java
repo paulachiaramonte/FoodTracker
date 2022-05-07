@@ -51,6 +51,7 @@ public class FoodFragment extends Fragment{
         foodRecycler.setLayoutManager(linearLayoutManager);
         foodRecycler.setAdapter(allFoodAdapter);
 
+        //meter en el if
         ImageView emptyFoodImage = view.findViewById(R.id.imageEmptyFood);
         TextView emptyFoodTextView = view.findViewById(R.id.TextViewEmptyFood);
 

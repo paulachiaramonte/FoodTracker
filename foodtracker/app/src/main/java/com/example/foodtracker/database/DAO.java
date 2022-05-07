@@ -100,6 +100,12 @@ public interface DAO {
     List<String> getMeal_type();
 
 
+    @Query("SELECT name FROM MealPlan_table WHERE date= :date AND type = :type")
+    List<String> getName_Meal(String date , String type);
+
+    @Query("SELECT name FROM MealPlan_table WHERE date= :date")
+    List<String> getMeals_date(String date);
+
 
     //Insert new food
     @Insert
