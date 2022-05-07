@@ -7,16 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.foodtracker.adapter.DinnerAdapter;
+import com.example.foodtracker.adapter.MealPlanAdapter;
 import com.example.foodtracker.database.AppDatabase;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class EditDateMealPlan extends AppCompatActivity {
@@ -67,7 +65,6 @@ public class EditDateMealPlan extends AppCompatActivity {
 
         String lunch = "Lunch";
         List<String> lunch_meals = db.DAO().getName_Meal(dateString, lunch);
-        Log.d("prueba todo bien siuuuuuuuuu","Size"+lunch_meals.size());
 
         TextView emptyFoodLunch = findViewById(R.id.TextNoLunch);
         if(lunch_meals.size() >0){
@@ -77,10 +74,15 @@ public class EditDateMealPlan extends AppCompatActivity {
         String dinner = "Dinner";
         List<String> dinner_meals = db.DAO().getName_Meal(dateString, dinner);
 
-        ListView list_dinner = findViewById(R.id.ListViewDinner);
 
+        ListView list_dinner = (ListView) findViewById(R.id.ListViewDinner);
 
-        TextView emptyFoodDinner = view.findViewById(R.id.TextNoDinner);
+        DinnerAdapter dinner_adapter = new DinnerAdapter(getApplicationContext(),
+                R.layout.activity_edit_date_meal_plan, dinner_meals);
+        list_dinner.setAdapter(dinner_adapter);
+
+        TextView emptyFoodDinner = findViewById(R.id.TextNoDinner);
+
         if(dinner_meals.size() >0){
             emptyFoodDinner.setVisibility(View.GONE);
         }

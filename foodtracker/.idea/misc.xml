@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/layout/activity_add_meal.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_edit_date_meal_plan.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_rest_client_list_view.xml" value="0.12234042553191489" />
+        <entry key="app/src/main/res/layout/date_list_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_food.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_meal_plan.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_shopping.xml" value="0.1" />
