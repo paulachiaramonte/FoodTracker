@@ -85,6 +85,7 @@ public class EditDateMealPlan extends AppCompatActivity {
         MealsAdapter dinner_adapter = new MealsAdapter(getApplicationContext(),
                 R.layout.food_list_item, dinner_meals);
         list_dinner.setAdapter(dinner_adapter);
+        //
 
         TextView emptyFoodDinner = findViewById(R.id.TextNoDinner);
 
