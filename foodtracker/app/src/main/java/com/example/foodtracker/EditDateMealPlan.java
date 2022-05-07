@@ -11,10 +11,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.foodtracker.adapter.DinnerAdapter;
-import com.example.foodtracker.adapter.MealPlanAdapter;
+import com.example.foodtracker.adapter.MealsAdapter;
 import com.example.foodtracker.database.AppDatabase;
+import com.example.foodtracker.model.Meal;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EditDateMealPlan extends AppCompatActivity {
@@ -47,10 +48,8 @@ public class EditDateMealPlan extends AppCompatActivity {
 
 
 
-        db = AppDatabase.getInstance(this);
+        db = AppDatabase.getInstance(getApplicationContext());
         //por hacer
-
-
 
         View view = (ViewGroup) getLayoutInflater().inflate(R.layout.activity_edit_date_meal_plan, null);
         //Loop
@@ -72,13 +71,19 @@ public class EditDateMealPlan extends AppCompatActivity {
         }
 
         String dinner = "Dinner";
-        List<String> dinner_meals = db.DAO().getName_Meal(dateString, dinner);
+        List<String> dinner_meals_q = db.DAO().getName_Meal(dateString, dinner);
 
-
+        ArrayList<Meal> dinner_meals = new ArrayList<>();
+        for (int i = 0; i < dinner_meals_q.size(); i++)
+        {
+            Meal mealName = new Meal(dinner_meals_q.get(i));
+            dinner_meals.add(mealName);
+        }
+        Log.d("dinner_meals.size", " " + dinner_meals.size());
         ListView list_dinner = (ListView) findViewById(R.id.ListViewDinner);
 
-        DinnerAdapter dinner_adapter = new DinnerAdapter(getApplicationContext(),
-                R.layout.activity_edit_date_meal_plan, dinner_meals);
+        MealsAdapter dinner_adapter = new MealsAdapter(getApplicationContext(),
+                R.layout.food_list_item, dinner_meals);
         list_dinner.setAdapter(dinner_adapter);
 
         TextView emptyFoodDinner = findViewById(R.id.TextNoDinner);
@@ -86,13 +91,6 @@ public class EditDateMealPlan extends AppCompatActivity {
         if(dinner_meals.size() >0){
             emptyFoodDinner.setVisibility(View.GONE);
         }
-
-
-
-
-
-
-
 
         buttonBreakfast.setOnClickListener(new View.OnClickListener(){
             @Override

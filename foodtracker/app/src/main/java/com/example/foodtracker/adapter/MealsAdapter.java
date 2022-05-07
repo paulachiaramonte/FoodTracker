@@ -19,14 +19,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DinnerAdapter extends ArrayAdapter<Meal> {
-    List<String> mealList;
+public class MealsAdapter extends ArrayAdapter<Meal> {
+    ArrayList<Meal> mealList;
     Context mContext;
     int mResource;
 
-    public DinnerAdapter(Context context, int resource, List<String> mealList) {
-        super(context, resource);
-        this.mealList = mealList;
+    public MealsAdapter(Context context, int resource, ArrayList<Meal> mealList) {
+        super(context, resource, mealList);
+        mealList = mealList;
         mContext = context;
         mResource = resource;
 
@@ -35,20 +35,18 @@ public class DinnerAdapter extends ArrayAdapter<Meal> {
     @SuppressLint("ViewHolder")
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         String name = getItem(position).getName();
-        String date = getItem(position).getDate();
-        String type = getItem(position).getType();
 
-        Meal meal = new Meal(date, type, name);
+        Meal meal = new Meal(name);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
         //ListView listView = (ListView) convertView.findViewById(R.id.ListViewDinner);
 
-        TextView tvDate = (TextView) convertView.findViewById(R.id.TextNoDinner);
+        TextView tvDate = (TextView) convertView.findViewById(R.id.FoodTextViewTitle);
 
         tvDate.setText(name);
         return convertView;
