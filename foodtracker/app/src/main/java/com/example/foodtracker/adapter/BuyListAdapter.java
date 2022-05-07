@@ -2,18 +2,24 @@ package com.example.foodtracker.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
+import com.example.foodtracker.AddFoodActivity;
+import com.example.foodtracker.EditDateMealPlan;
 import com.example.foodtracker.R;
 import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.model.BuyList;
@@ -55,37 +61,7 @@ public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodV
         holder.number.setText(String.valueOf(quantityFood));
 
         //in some cases, it will prevent unwanted situations
-        holder.checkBox.setOnCheckedChangeListener(null);
-
-/*        holder.checkBox.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                final boolean isChecked = holder.checkBox.isChecked();
-                if (isChecked){
-                    AlertDialog.Builder ad = new AlertDialog.Builder(holder.checkBox.getContext());
-                    ad.setTitle("Edit " + nameFood);
-                    ad.setMessage("Do you want to delete " + nameFood + " from Shopping List or add " + nameFood  + " in Food?");
-                    ad.setPositiveButton("Add to Food",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int arg1) {
-                                    dialog.cancel();
-                                }
-                            });
-                    ad.setNegativeButton("Delete",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int arg1) {
-                                    //db.DAO().deleteShopFoodbyID(idFood);
-                                    buyListList.remove(pos);
-                                    Log.d("ID of food clicked", String.valueOf((long) idFood));
-                                    dialog.cancel();
-                                }
-                            });
-                    ad.show();
-
-                }
-            }
-        });*/
+        //holder.checkBox.setOnCheckedChangeListener(null);
 
         //if true, your checkbox will be selected, else unselected
         //holder.checkBox.setChecked(objIncome.isSelected());
@@ -96,51 +72,70 @@ public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodV
         return buyListList.size();
     }
 
-    public static final class BuyFoodViewHolder extends ViewHolder{
+    public class BuyFoodViewHolder extends ViewHolder implements CompoundButton.OnCheckedChangeListener{
 
-        CheckBox checkBox; //a
-        TextView number, name;
-        private BuyListAdapter adapter;
+        public CheckBox checkBox; //a
+        public TextView number, name;
 
         public BuyFoodViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            number = itemView.findViewById(R.id.buy_quantity);
-            name = itemView.findViewById(R.id.buy_name);
-            checkBox = itemView.findViewById(R.id.shopping_checkbox);
-
-/*            checkBox.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View arg0) {
-                    final boolean isChecked = checkBox.isChecked();
-                    if (isChecked){
-                        AlertDialog.Builder ad = new AlertDialog.Builder(checkBox.getContext());
-                        ad.setTitle("Edit Shopping List");
-                        ad.setMessage("Do you want to delete from Shopping List or add in Food?");
-                        ad.setPositiveButton("Add to Food",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int arg1) {
-                                        dialog.cancel();
-                                    }
-                                });
-                        ad.setNegativeButton("Delete",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int arg1) {
-                                        //db.DAO().deleteShopFoodbyID(idFood);
-                                        Log.d("POS", "ID: " + adapter.buyListList.get(getAdapterPosition()));
-                                        adapter.buyListList.remove(getAdapterPosition());
-                                        //adapter.notifyItemChanged(getAdapterPosition());
-                                        dialog.cancel();
-                                    }
-                                });
-                        ad.show();
-
-                    }
-                }
-            });*/
-
+            number = (TextView) itemView.findViewById(R.id.buy_quantity);
+            name = (TextView) itemView.findViewById(R.id.buy_name);
+            checkBox = (CheckBox) itemView.findViewById(R.id.shopping_checkbox);
+            checkBox.setOnCheckedChangeListener(this);
 
         }
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+            AlertDialog.Builder ad = new AlertDialog.Builder(context);
+            ad.setTitle("Edit Shopping List");
+            ad.setMessage("Do you want to delete from Shopping List or add in Food?");
+            ad.setPositiveButton("Add to Food",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int arg1) {
+                            addToFood(getAdapterPosition(), this);
+                            dialog.cancel();
+                        }
+                    });
+            ad.setNegativeButton("Delete",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int arg1) {
+                            removeAt(getAdapterPosition(),this);
+                            dialog.cancel();
+                        }
+                    });
+            ad.show();
+
+        }
+
+    }
+    public void removeAt(int position, DialogInterface.OnClickListener viewHolder) {
+        db = AppDatabase.getInstance(context);
+        Long id_item = buyListList.get(position).getId();
+        String name_item = buyListList.get(position).getName();
+        Toast.makeText(context, name_item + " deleted from the Shopping List",
+                Toast.LENGTH_LONG).show();
+        buyListList.remove(position);
+        db.DAO().deleteShopFoodbyID(id_item);
+        notifyItemRemoved(position);
+    }
+
+    public void addToFood(int position, DialogInterface.OnClickListener viewHolder){
+        db = AppDatabase.getInstance(context);
+        Long id_item = buyListList.get(position).getId();
+        String name_item = buyListList.get(position).getName();
+        Integer quantity_item = buyListList.get(position).getNumber();
+
+        Intent intent = new Intent(context, AddFoodActivity.class);
+        intent.putExtra("Name",name_item);
+
+        buyListList.remove(position);
+        db.DAO().deleteShopFoodbyID(id_item);
+        notifyItemRemoved(position);
+
+        context.startActivity(intent);
+
     }
 }
