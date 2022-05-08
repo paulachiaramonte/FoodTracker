@@ -55,18 +55,46 @@ public class EditDateMealPlan extends AppCompatActivity {
         //Loop
 
         String breakfast = "Breakfast";
-        List<String> breakfast_meals = db.DAO().getName_Meal(dateString, breakfast);
+        List<String> breakfast_meals_q = db.DAO().getName_Meal(dateString, breakfast);
+
+        ArrayList<Meal> breakfast_meals = new ArrayList<>();
+        for (int i = 0; i < breakfast_meals_q.size(); i++)
+        {
+            Meal mealName = new Meal(breakfast_meals_q.get(i));
+            breakfast_meals.add(mealName);
+        }
+
+        ListView list_breakfast = (ListView) findViewById(R.id.ListViewBreakfast);
+
+        MealsAdapter breakfast_adapter = new MealsAdapter(getApplicationContext(),
+                R.layout.food_list_item, breakfast_meals);
+        list_breakfast.setAdapter(breakfast_adapter);
+        //
 
         TextView emptyFoodBreakfast = findViewById(R.id.TextNoBreakfast);
-        if(breakfast_meals.size() >0){
+        if(breakfast_meals_q.size() >0){
             emptyFoodBreakfast.setVisibility(View.GONE);
         }
 
         String lunch = "Lunch";
-        List<String> lunch_meals = db.DAO().getName_Meal(dateString, lunch);
+        List<String> lunch_meals_q = db.DAO().getName_Meal(dateString, lunch);
+
+        ArrayList<Meal> lunch_meals = new ArrayList<>();
+        for (int i = 0; i < lunch_meals_q.size(); i++)
+        {
+            Meal mealName = new Meal(lunch_meals_q.get(i));
+            lunch_meals.add(mealName);
+        }
+
+        ListView list_lunch = (ListView) findViewById(R.id.ListViewLunch);
+
+        MealsAdapter lunch_adapter = new MealsAdapter(getApplicationContext(),
+                R.layout.food_list_item, lunch_meals);
+        list_lunch.setAdapter(lunch_adapter);
+        //
 
         TextView emptyFoodLunch = findViewById(R.id.TextNoLunch);
-        if(lunch_meals.size() >0){
+        if(lunch_meals_q.size() >0){
             emptyFoodLunch.setVisibility(View.GONE);
         }
 
@@ -79,7 +107,7 @@ public class EditDateMealPlan extends AppCompatActivity {
             Meal mealName = new Meal(dinner_meals_q.get(i));
             dinner_meals.add(mealName);
         }
-        Log.d("dinner_meals.size", " " + dinner_meals.size());
+
         ListView list_dinner = (ListView) findViewById(R.id.ListViewDinner);
 
         MealsAdapter dinner_adapter = new MealsAdapter(getApplicationContext(),
@@ -89,7 +117,7 @@ public class EditDateMealPlan extends AppCompatActivity {
 
         TextView emptyFoodDinner = findViewById(R.id.TextNoDinner);
 
-        if(dinner_meals.size() >0){
+        if(dinner_meals_q.size() >0){
             emptyFoodDinner.setVisibility(View.GONE);
         }
 
@@ -105,7 +133,7 @@ public class EditDateMealPlan extends AppCompatActivity {
             public void onClick(View view) {
                 goActivityMeal("Lunch", dateString);
             }
-         });
+        });
 
         buttonDinner.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -2,6 +2,7 @@ package com.example.foodtracker.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,8 @@ public class MealsAdapter extends ArrayAdapter<Meal> {
         //ListView listView = (ListView) convertView.findViewById(R.id.ListViewDinner);
 
         TextView tvDate = (TextView) convertView.findViewById(R.id.FoodTextViewTitle);
+        tvDate.setTextColor(Color.WHITE);
+        tvDate.setTextSize(22);
 
         tvDate.setText(name);
         return convertView;

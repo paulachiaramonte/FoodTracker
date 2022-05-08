@@ -51,11 +51,11 @@ public class FoodFragment extends Fragment{
         foodRecycler.setLayoutManager(linearLayoutManager);
         foodRecycler.setAdapter(allFoodAdapter);
 
-        //meter en el if
-        ImageView emptyFoodImage = view.findViewById(R.id.imageEmptyFood);
-        TextView emptyFoodTextView = view.findViewById(R.id.TextViewEmptyFood);
 
         if (allFoodList.size() == 0){
+            ImageView emptyFoodImage = view.findViewById(R.id.imageEmptyFood);
+            TextView emptyFoodTextView = view.findViewById(R.id.TextViewEmptyFood);
+
             emptyFoodImage.setVisibility(view.VISIBLE);
             emptyFoodTextView.setVisibility(view.VISIBLE);
         }
