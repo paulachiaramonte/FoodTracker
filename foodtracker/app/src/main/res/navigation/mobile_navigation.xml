@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_food"
-        android:name="com.example.menu_food_tracker.FoodFragment"
+        android:name="com.example.foodtracker.FoodFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_food" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.menu_food_tracker.ShoppingFragment"
+        android:name="com.example.foodtracker.ShoppingFragment"
         android:label="@string/title_shop_list"
         tools:layout="@layout/fragment_shopping" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.menu_food_tracker.MealPlanFragment"
+        android:name="com.example.foodtracker.MealPlanFragment"
         android:label="@string/title_meal_plan"
         tools:layout="@layout/fragment_meal_plan" />
 
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.example.menu_food_tracker.SettingsFragment"
+        android:name="com.example.foodtracker.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
 

@@ -46,8 +46,6 @@ public class EditDateMealPlan extends AppCompatActivity {
         Button buttonLunch = (Button) findViewById(R.id.ButtonAddLunch);
         Button buttonDinner = (Button) findViewById(R.id.ButtonAddDinner);
 
-
-
         db = AppDatabase.getInstance(getApplicationContext());
         //por hacer
 
