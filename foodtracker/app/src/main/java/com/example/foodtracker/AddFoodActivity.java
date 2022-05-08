@@ -1,6 +1,8 @@
 package com.example.foodtracker;
 
+import android.app.AlarmManager;
 import android.app.DatePickerDialog;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,9 +24,11 @@ import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.database.FoodD;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class AddFoodActivity extends AppCompatActivity {
 
@@ -80,6 +84,12 @@ public class AddFoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 register_food();
+                try {
+                    createNotification();
+                    Log.d("A notification was created", "DONE");
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
 
             }
         });
@@ -162,5 +172,41 @@ public class AddFoodActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("intFragment", 1);
         startActivity(intent);
+    }
+
+    public void createNotification() throws ParseException {
+        // Set notificationId & text
+        DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        db = AppDatabase.getInstance(getApplicationContext());
+        Long notificationId = db.DAO().getLastIdFoodTable();
+        String nameFoodItem = db.DAO().getFoodFromId(notificationId);
+        String dateFoodItem = db.DAO().getDateFromId(notificationId);
+
+
+
+        Intent intent = new Intent(this, NotificationReceiver.class);
+        intent.putExtra("notificationId", notificationId);
+        intent.putExtra("foodName", nameFoodItem);
+
+        //PendingIntent
+        PendingIntent alarmIntent = PendingIntent.getBroadcast(
+                AddFoodActivity.this, 0, intent,
+                PendingIntent.FLAG_CANCEL_CURRENT
+        );
+
+        // AlarmManager
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(format.parse(dateFoodItem));
+        cal.set(Calendar.HOUR_OF_DAY, 3);
+        cal.set(Calendar.MINUTE, 26);
+        cal.set(Calendar.SECOND, 0);
+
+        long alarmStartTime = cal.getTimeInMillis();
+
+        //Set Alarm
+        alarmManager.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
+
+
     }
 }

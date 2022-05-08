@@ -43,6 +43,8 @@
     <string name="LunchString">Lunch</string>
     <string name="PreviousStr">Prev</string>
     <string name="PlusStr">+</string>
+    <string name="notifications_preferences">true</string>
+    <string name="settings">Settings</string>
 
 
 </resources>

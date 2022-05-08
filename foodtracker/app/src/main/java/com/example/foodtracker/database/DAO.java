@@ -51,6 +51,15 @@ public interface DAO {
     @Query("SELECT quantity FROM Food_table WHERE place= :place ORDER BY expDate")
     List<Integer> getQuantity_place(String place);
 
+    @Query("SELECT id FROM Food_table ORDER BY id DESC LIMIT 1")
+    Long getLastIdFoodTable();
+
+    @Query("SELECT food FROM Food_table WHERE id = :idx")
+    String getFoodFromId(Long idx);
+
+    @Query("SELECT expire FROM Food_table WHERE id = :idx")
+    String getDateFromId(Long idx);
+
     //Insert new food
     @Insert
     void insertFoodD(FoodD food);
