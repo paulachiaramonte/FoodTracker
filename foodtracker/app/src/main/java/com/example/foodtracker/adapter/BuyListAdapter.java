@@ -60,11 +60,6 @@ public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodV
         holder.name.setText(nameFood);
         holder.number.setText(String.valueOf(quantityFood));
 
-        //in some cases, it will prevent unwanted situations
-        //holder.checkBox.setOnCheckedChangeListener(null);
-
-        //if true, your checkbox will be selected, else unselected
-        //holder.checkBox.setChecked(objIncome.isSelected());
     }
 
     @Override
@@ -84,6 +79,7 @@ public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodV
             name = (TextView) itemView.findViewById(R.id.buy_name);
             checkBox = (CheckBox) itemView.findViewById(R.id.shopping_checkbox);
             checkBox.setOnCheckedChangeListener(this);
+            checkBox.setSelected(false);
 
         }
         @Override
@@ -104,6 +100,13 @@ public class BuyListAdapter extends RecyclerView.Adapter<BuyListAdapter.BuyFoodV
                         public void onClick(DialogInterface dialog, int arg1) {
                             removeAt(getAdapterPosition(),this);
                             dialog.cancel();
+                        }
+                    });
+            ad.setNeutralButton("Cancel",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            dialog.cancel();
+                            checkBox.setSelected(false);
                         }
                     });
             ad.show();

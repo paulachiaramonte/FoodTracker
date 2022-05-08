@@ -103,9 +103,14 @@ public interface DAO {
     @Query("SELECT name FROM MealPlan_table WHERE date= :date AND type = :type")
     List<String> getName_Meal(String date , String type);
 
+    @Query("SELECT id FROM MealPlan_table WHERE date= :date AND type = :type")
+    List<Long> getId_Meal(String date , String type);
+
     @Query("SELECT name FROM MealPlan_table WHERE date= :date")
     List<String> getMeals_date(String date);
 
+    @Query("DELETE FROM MealPlan_table WHERE id = :id")
+    public void DeleteMealById(Long id);
 
     //Insert new food
     @Insert
@@ -115,6 +120,8 @@ public interface DAO {
     //Delete food
     @Delete
     void delete(FoodD food);
+
+
 
     //Delete all Meal Plan
     @Query("DELETE FROM MealPlan_table")

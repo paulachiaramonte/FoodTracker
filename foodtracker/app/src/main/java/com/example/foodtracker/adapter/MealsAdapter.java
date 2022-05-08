@@ -3,6 +3,7 @@ package com.example.foodtracker.adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,7 @@ public class MealsAdapter extends ArrayAdapter<Meal> {
 
     public MealsAdapter(Context context, int resource, ArrayList<Meal> mealList) {
         super(context, resource, mealList);
-        mealList = mealList;
+        this.mealList = mealList;
         mContext = context;
         mResource = resource;
 
@@ -38,20 +39,19 @@ public class MealsAdapter extends ArrayAdapter<Meal> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        String name = getItem(position).getName();
+        Long id = mealList.get(position).getId();
+        String name = mealList.get(position).getName();
 
-        Meal meal = new Meal(name);
+        Meal meal = new Meal(id, name);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
-        //ListView listView = (ListView) convertView.findViewById(R.id.ListViewDinner);
-
         TextView tvDate = (TextView) convertView.findViewById(R.id.FoodTextViewTitle);
         tvDate.setTextColor(Color.WHITE);
-        tvDate.setTextSize(22);
-
+        tvDate.setTextSize(18);
         tvDate.setText(name);
         return convertView;
     }
+
 }
