@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -41,6 +42,8 @@ public class CheckShelfLife extends AppCompatActivity {
     private ArrayList<String> urlList;
     ArrayList<String> nameListCopy;
     private HashMap<String, Integer> dictFoodId;
+    private ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class CheckShelfLife extends AppCompatActivity {
 
         Button searchButton = findViewById(R.id.SearchFoodDatesButton);
         filterText = (EditText) findViewById(R.id.EditTextSearch);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         filterText.addTextChangedListener(filterTextWatcher);
 
@@ -67,7 +71,7 @@ public class CheckShelfLife extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         RestClient foodDataBase = new RestClient(listView, adapter,urlAdapter,
-                nameList, urlList, dictFoodId);
+                nameList, urlList, dictFoodId, progressBar);
         foodDataBase.execute("https://shelf-life-api.herokuapp.com/search?");
 
 

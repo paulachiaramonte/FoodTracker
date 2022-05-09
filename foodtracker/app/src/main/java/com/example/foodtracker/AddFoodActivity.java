@@ -85,7 +85,12 @@ public class AddFoodActivity extends AppCompatActivity {
             public void onClick(View view){
                 register_food();
                 try {
-                    createNotification();
+                    // 2 days notification
+                    createNotification(2);
+                    // 1 days notification
+                    createNotification(1);
+                    // 0 days notification
+                    createNotification(0);
                     Log.d("A notification was created", "DONE");
                 } catch (ParseException e) {
                     e.printStackTrace();
@@ -174,7 +179,7 @@ public class AddFoodActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void createNotification() throws ParseException {
+    public void createNotification(Integer num_days) throws ParseException {
         // Set notificationId & text
         DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         db = AppDatabase.getInstance(getApplicationContext());
@@ -183,10 +188,10 @@ public class AddFoodActivity extends AppCompatActivity {
         String dateFoodItem = db.DAO().getDateFromId(notificationId);
 
 
-
         Intent intent = new Intent(this, NotificationReceiver.class);
         intent.putExtra("notificationId", notificationId);
         intent.putExtra("foodName", nameFoodItem);
+        intent.putExtra("daysLeft", num_days);
 
         //PendingIntent
         PendingIntent alarmIntent = PendingIntent.getBroadcast(
@@ -198,15 +203,19 @@ public class AddFoodActivity extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         Calendar cal = Calendar.getInstance();
         cal.setTime(format.parse(dateFoodItem));
-        cal.set(Calendar.HOUR_OF_DAY, 3);
-        cal.set(Calendar.MINUTE, 26);
-        cal.set(Calendar.SECOND, 0);
 
+
+        cal.set(Calendar.HOUR_OF_DAY, 8);
+        //cal.set(Calendar.MINUTE, 26);
+        //cal.set(Calendar.SECOND, 0);
+        cal.add(Calendar.MINUTE, 1);
+
+        // Create alarm for -num_days notification
+        cal.add(Calendar.DATE, -num_days);
+        Log.d("Notification added: " ,"time: " + cal.getTime().toString());
         long alarmStartTime = cal.getTimeInMillis();
-
         //Set Alarm
         alarmManager.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
-
 
     }
 }

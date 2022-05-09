@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/buttonWidgetId"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_egg_icon"
+        android:fontFamily="@font/semibold"
+        android:text="Check Food's Shelf Life"
+        android:textColor="@color/white_mint"
+        android:textSize="16sp"
+        android:elevation="50dp"
+        android:background="@drawable/shape_dark_blue" />
+
+</LinearLayout>
