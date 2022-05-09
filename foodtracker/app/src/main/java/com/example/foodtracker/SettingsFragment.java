@@ -16,6 +16,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import com.example.foodtracker.database.AppDatabase;
@@ -23,6 +24,7 @@ import com.example.foodtracker.database.AppDatabase;
 public class SettingsFragment extends Fragment {
 
     AppDatabase db;
+    private Switch aSwitch;
 
     public SettingsFragment() {
         // Required empty public constructor
@@ -53,6 +55,28 @@ public class SettingsFragment extends Fragment {
                 Log.d("Key Value", getString(R.string.notifications_preferences));
             }
         });*/
+        //theme
+        aSwitch = (Switch) view.findViewById(R.id.switchTheme);
+
+        if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            aSwitch.setChecked(true);
+        }
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if(b){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    Log.d("Dark", "onCheckedChanged: Dark");
+                    reset();
+                } else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    reset();
+                    Log.d("Light", "onCheckedChanged: Light");
+                }
+            }
+        });
 
 
 
@@ -102,5 +126,9 @@ public class SettingsFragment extends Fragment {
 
         return view;
 
+    }
+    private void reset() {
+        Intent intent = new Intent(getContext(), MainActivity.class);
+        startActivity(intent);
     }
 }
