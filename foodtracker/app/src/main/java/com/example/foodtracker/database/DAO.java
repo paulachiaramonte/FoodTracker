@@ -51,6 +51,32 @@ public interface DAO {
     @Query("SELECT quantity FROM Food_table WHERE place= :place ORDER BY expDate")
     List<Integer> getQuantity_place(String place);
 
+    @Query("SELECT food FROM Food_table  ORDER BY expDate")
+    List<String> getFood_byexp();
+
+    @Query("SELECT expire FROM Food_table  ORDER BY expDate")
+    List<String> getExp_byexp();
+
+    @Query("SELECT place FROM Food_table  ORDER BY expDate")
+    List<String> getPlace_byexp();
+
+    @Query("SELECT quantity FROM Food_table  ORDER BY expDate")
+    List<Integer> getQuant_byexp();
+
+    @Query("SELECT food FROM Food_table  ORDER BY food")
+    List<String> getFood_byname();
+
+    @Query("SELECT expire FROM Food_table  ORDER BY food")
+    List<String> getExp_byname();
+
+    @Query("SELECT place FROM Food_table  ORDER BY food")
+    List<String> getPlace_byname();
+
+    @Query("SELECT quantity FROM Food_table  ORDER BY food")
+    List<Integer> getQuant_byname();
+
+
+
     @Query("SELECT id FROM Food_table ORDER BY id DESC LIMIT 1")
     Long getLastIdFoodTable();
 

@@ -1,5 +1,7 @@
 package com.example.foodtracker;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.foodtracker.adapter.AllFoodAdapter;
 import com.example.foodtracker.database.AppDatabase;
 import com.example.foodtracker.model.AllFood;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,6 +34,7 @@ public class FoodFragment extends Fragment{
     private Button fridge;
     private Button freezer;
     private Button pantry;
+    private FloatingActionButton filter;
 
     public FoodFragment() {
         // Required empty public constructor
@@ -164,6 +168,68 @@ public class FoodFragment extends Fragment{
                 allFoodAdapter.notifyDataSetChanged();
             }
         });
+
+
+        filter = view.findViewById(R.id.filter);
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder ad = new AlertDialog.Builder(getContext());
+                ad.setTitle("Filter By:");
+                ad.setNegativeButton("Closest expiry",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int arg1) {
+                                //Empty your list:
+                                allFoodList.clear();
+                                db = AppDatabase.getInstance(getContext());
+                                List<String> all_food = db.DAO().getFood_byexp();
+                                List<String> all_exp = db.DAO().getExp_byexp();
+                                List<String> all_place = db.DAO().getPlace_byexp();
+                                List<Integer> all_quantity = db.DAO().getQuant_byexp();
+                                //Iterate though the food and expire date lists
+                                Iterator<String> it1 = all_food.iterator();
+                                Iterator<String> it2 = all_exp.iterator();
+                                Iterator<String> it3 = all_place.iterator();
+                                Iterator<Integer> it4 = all_quantity.iterator();
+                                while (it1.hasNext() && it2.hasNext()) {
+                                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                                            it3.next(), it4.next()));
+                                }
+                                dialog.cancel();
+                                allFoodAdapter.notifyDataSetChanged();
+                            }
+                        });
+                ad.setPositiveButton("Name",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int arg1) {
+                                //Empty your list:
+                                allFoodList.clear();
+                                db = AppDatabase.getInstance(getContext());
+                                List<String> all_food = db.DAO().getFood_byname();
+                                List<String> all_exp = db.DAO().getExp_byname();
+                                List<String> all_place = db.DAO().getPlace_byname();
+                                List<Integer> all_quantity = db.DAO().getQuant_byname();
+                                //Iterate though the food and expire date lists
+                                Iterator<String> it1 = all_food.iterator();
+                                Iterator<String> it2 = all_exp.iterator();
+                                Iterator<String> it3 = all_place.iterator();
+                                Iterator<Integer> it4 = all_quantity.iterator();
+                                while (it1.hasNext() && it2.hasNext()) {
+                                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                                            it3.next(), it4.next()));
+                                }
+                                dialog.cancel();
+                                allFoodAdapter.notifyDataSetChanged();
+                            }
+                        });
+                ad.setNeutralButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                ad.show();
+            }});
 
         return view;
     }
