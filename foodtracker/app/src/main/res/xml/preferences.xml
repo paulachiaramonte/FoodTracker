@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        android:key="notifications_preferences"
+        android:title="@string/notifications_preferences"
+        android:summary="Allow notifications of food state's reminders"
+        android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="@string/notif_pref_morning"
+        android:title="Morning Notification"
+        android:summary="Allow notifications at 9:00"
+        android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="@string/notif_pref_noon"
+        android:title="Afternoon Notifications"
+        android:summary="Allow notifications at 13:00"
+        android:defaultValue="true"/>
+
+    <CheckBoxPreference
+        android:key="@string/notif_pref_night"
+        android:title="Night Notifications"
+        android:summary="Allow notifications at 19:00"
+        android:defaultValue="true"/>
+
+</PreferenceScreen>

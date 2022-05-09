@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void go_shelf_life(View v){
+        Intent intent = new Intent(MainActivity.this, CheckShelfLife.class);
+        startActivity(intent);
+    }
+
 
 
 

@@ -4,16 +4,26 @@ import android.content.Intent;
 
 public class AllFood {
 
+    Long id;
     String name;
     String exp;
     String place;
     Integer quantity;
 
-    public AllFood(String name, String exp, String place, Integer quantity) {
+    public AllFood(Long id, String name, String exp, String place, Integer quantity) {
+        this.id = id;
         this.name = name;
         this.exp = exp;
         this.place = place;
         this.quantity = quantity;
+    }
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
     }
 
     public String getName() {

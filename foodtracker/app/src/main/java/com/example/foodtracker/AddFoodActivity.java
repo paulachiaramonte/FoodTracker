@@ -42,15 +42,23 @@ public class AddFoodActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_food);
 
         EditText EditFoodName = findViewById(R.id.editFoodName_food);
+        EditText EditQuantity = findViewById(R.id.editTextQuantity_food);
+        EditText EditDate = findViewById(R.id.editDateExpiration_food);
 
         Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
 
-        Log.d("Intent Extra", "is " + intent.hasExtra("Name"));
         if (intent.hasExtra("Name")) {
-            String nameFood = intent.getExtras().getString("Name");
+            String nameFood = bundle.getString("Name");
             EditFoodName.setText(nameFood, TextView.BufferType.EDITABLE);
-            Log.d("Value extra", "is: " + nameFood);
+        }
+        if (intent.hasExtra("Quantity")){
+            int quantity = bundle.getInt("Quantity");
+            EditQuantity.setText(String.valueOf(quantity), TextView.BufferType.EDITABLE);
+        }
+        if (intent.hasExtra("Expiry")){
+            String exp = bundle.getString("Expiry");
+            EditDate.setText(exp, TextView.BufferType.EDITABLE);
         }
 
         Spinner spinner = (Spinner) findViewById(R.id.Spinner_Place_food);
@@ -83,6 +91,10 @@ public class AddFoodActivity extends AppCompatActivity {
         findViewById((R.id.buttonAddFood)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
+                if (intent.hasExtra("Edit")){
+                    edit_food();
+                }else{
                 register_food();
                 try {
                     // 2 days notification
@@ -91,11 +103,10 @@ public class AddFoodActivity extends AppCompatActivity {
                     createNotification(1);
                     // 0 days notification
                     createNotification(0);
-                    Log.d("A notification was created", "DONE");
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-
+            }
             }
         });
 
@@ -162,6 +173,43 @@ public class AddFoodActivity extends AppCompatActivity {
             successToast();
             startActivity(intent);
         }
+    }
+
+    private void edit_food(){
+
+        EditText EditFoodName = findViewById(R.id.editFoodName_food);
+        EditText EditDate = findViewById(R.id.editDateExpiration_food);
+        EditText EditQuantity = findViewById(R.id.editTextQuantity_food);
+
+        Intent intent = getIntent();
+        long id_food = intent.getExtras().getLong("id");
+        String place_original = intent.getExtras().getString("Place");
+
+        db = AppDatabase.getInstance(getApplicationContext());
+        FoodD food_to_edit = db.DAO().findById(id_food);
+
+        Spinner spinner_place = (Spinner) findViewById(R.id.Spinner_Place_food);
+        String place = spinner_place.getSelectedItem().toString();
+        String food = EditFoodName.getText().toString();
+        String expire = EditDate.getText().toString();
+        String quantity = EditQuantity.getText().toString();
+
+        /*if(place_original != place){
+            food_to_edit.setPlace(place);
+        }
+        food_to_edit.setFood(food);
+        food_to_edit.setExpire(expire);
+        food_to_edit.setQuantity(Integer.parseInt(quantity));*/
+
+        db.DAO().updateFoodById(food, expire, place, Integer.parseInt(quantity), id_food);
+
+        Log.d("Item updated", " " + food_to_edit.getFood());
+
+        setResult(RESULT_OK);
+        Intent intentNew = new Intent(this, MainActivity.class);
+        intent.putExtra("intFragment", 1);
+        Toast.makeText(this, "Edit correctly done", Toast.LENGTH_SHORT).show();
+        startActivity(intentNew);
     }
 
     private void successToast() {

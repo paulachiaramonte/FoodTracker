@@ -45,26 +45,27 @@
             android:src="@drawable/circle_crop" />
 
     </FrameLayout>
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="32dp"
+
+
+    <Button
+        android:id="@+id/goToCheckLifeButton"
+        android:layout_width="308dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/search_bg"
         android:drawableLeft="@drawable/ic_search_24"
-        android:drawablePadding="8dp"
-        android:ems="10"
-        android:hint="@android:string/search_go"
+        android:drawablePadding="0dp"
         android:inputType="textPersonName"
-        android:paddingStart="16dp"
-        android:text="@android:string/search_go"
+        android:text="Search the Shelf Life of any food"
+        android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/filter"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:onClick="go_shelf_life"
+        android:focusable="true"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/filter"
@@ -73,9 +74,9 @@
         android:layout_marginEnd="12dp"
         android:backgroundTint="@color/white"
         app:borderWidth="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/goToCheckLifeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toTopOf="@+id/goToCheckLifeButton"
         app:fabCustomSize="33dp"
         app:srcCompat="@drawable/ic_filter_list_24" />
 
@@ -90,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/goToCheckLifeButton"
         app:layout_constraintVertical_bias="0.111">
 
         <LinearLayout

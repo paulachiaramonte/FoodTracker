@@ -23,6 +23,10 @@ public interface DAO {
     @Query("SELECT * FROM Food_table WHERE id IN (:foodsIds)")
     List<FoodD> loadAllByIds(long[] foodsIds);
 
+    //Get all ids
+    @Query("SELECT id FROM Food_table ORDER BY expDate")
+    List<Long> getIds();
+
     //Get expire date and food name from all instances
     @Query("SELECT food FROM Food_table ORDER BY expDate")
     List<String> getFoodN();
@@ -36,6 +40,10 @@ public interface DAO {
 
     @Query("SELECT quantity FROM Food_table ORDER BY expDate")
     List<Integer> getQuant();
+
+    //Get ids from a specific place(pantry, freezer, fridge)
+    @Query("SELECT id FROM Food_table WHERE place= :place ORDER BY expDate")
+    List<Long> getId_place(String place);
 
     //Get expire date and food name from a specific place(pantry, freezer, fridge)
     @Query("SELECT food FROM Food_table WHERE place= :place ORDER BY expDate")
@@ -51,6 +59,9 @@ public interface DAO {
     @Query("SELECT quantity FROM Food_table WHERE place= :place ORDER BY expDate")
     List<Integer> getQuantity_place(String place);
 
+    @Query("SELECT id FROM Food_table  ORDER BY expDate")
+    List<Long> getId_byexp();
+
     @Query("SELECT food FROM Food_table  ORDER BY expDate")
     List<String> getFood_byexp();
 
@@ -62,6 +73,9 @@ public interface DAO {
 
     @Query("SELECT quantity FROM Food_table  ORDER BY expDate")
     List<Integer> getQuant_byexp();
+
+    @Query("SELECT id FROM Food_table  ORDER BY food")
+    List<Long> getId_byname();
 
     @Query("SELECT food FROM Food_table  ORDER BY food")
     List<String> getFood_byname();
@@ -86,9 +100,15 @@ public interface DAO {
     @Query("SELECT expire FROM Food_table WHERE id = :idx")
     String getDateFromId(Long idx);
 
+    @Query("UPDATE Food_table SET food = :food, expire = :expire , place = :place, quantity = :quant WHERE id =:id")
+    void updateFoodById(String food, String expire, String place, Integer quant, Long id);
+
     //Insert new food
     @Insert
     void insertFoodD(FoodD food);
+
+    @Delete
+    void deleteFood(FoodD food);
 
     // Delete all rows from Food_table
     @Query("DELETE FROM Food_table;")

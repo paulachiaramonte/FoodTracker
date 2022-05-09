@@ -2,6 +2,7 @@ package com.example.foodtracker;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,17 +78,19 @@ public class FoodFragment extends Fragment{
                 //Empty your list:
                 allFoodList.clear();
 
+                List<Long> all_ids = db.DAO().getIds();
                 List<String> all_food = db.DAO().getFoodN();
                 List<String> all_exp = db.DAO().getExp();
                 List<String> all_place = db.DAO().getPlace();
                 List<Integer> all_quantity = db.DAO().getQuant();
                 //Iterate though the food and expire date lists
+                Iterator<Long> it0 = all_ids.iterator();
                 Iterator<String> it1 = all_food.iterator();
                 Iterator<String> it2 = all_exp.iterator();
                 Iterator<String> it3 = all_place.iterator();
                 Iterator<Integer> it4 = all_quantity.iterator();
                 while (it1.hasNext() && it2.hasNext()) {
-                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                             it3.next(), it4.next()));
                 }
 
@@ -102,17 +105,19 @@ public class FoodFragment extends Fragment{
                 allFoodList.clear();
 
                 db = AppDatabase.getInstance(getContext());
+                List<Long> all_ids = db.DAO().getId_place("Fridge");
                 List<String> all_food = db.DAO().getFood_place("Fridge");
                 List<String> all_exp = db.DAO().getExp_place("Fridge");
                 List<String> all_place = db.DAO().getPlace_place("Fridge");
                 List<Integer> all_quantity = db.DAO().getQuantity_place("Fridge");
                 //Iterate though the food and expire date lists
+                Iterator<Long> it0 = all_ids.iterator();
                 Iterator<String> it1 = all_food.iterator();
                 Iterator<String> it2 = all_exp.iterator();
                 Iterator<String> it3 = all_place.iterator();
                 Iterator<Integer> it4 = all_quantity.iterator();
                 while (it1.hasNext() && it2.hasNext()) {
-                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                             it3.next(), it4.next()));
                 }
 
@@ -126,17 +131,19 @@ public class FoodFragment extends Fragment{
                 //Empty your list:
                 allFoodList.clear();
                 db = AppDatabase.getInstance(getContext());
+                List<Long> all_ids = db.DAO().getId_place("Freezer");
                 List<String> all_food = db.DAO().getFood_place("Freezer");
                 List<String> all_exp = db.DAO().getExp_place("Freezer");
                 List<String> all_place = db.DAO().getPlace_place("Freezer");
                 List<Integer> all_quantity = db.DAO().getQuantity_place("Freezer");
                 //Iterate though the food and expire date lists
+                Iterator<Long> it0 = all_ids.iterator();
                 Iterator<String> it1 = all_food.iterator();
                 Iterator<String> it2 = all_exp.iterator();
                 Iterator<String> it3 = all_place.iterator();
                 Iterator<Integer> it4 = all_quantity.iterator();
                 while (it1.hasNext() && it2.hasNext()) {
-                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                             it3.next(), it4.next()));
                 }
 
@@ -151,17 +158,19 @@ public class FoodFragment extends Fragment{
                 allFoodList.clear();
                 //Get new info from database
                 db = AppDatabase.getInstance(getContext());
+                List<Long> all_ids = db.DAO().getId_place("Pantry");
                 List<String> all_food = db.DAO().getFood_place("Pantry");
                 List<String> all_exp = db.DAO().getExp_place("Pantry");
                 List<String> all_place = db.DAO().getPlace_place("Pantry");
                 List<Integer> all_quantity = db.DAO().getQuantity_place("Pantry");
                 //Iterate though the food and expire date lists
+                Iterator<Long> it0 = all_ids.iterator();
                 Iterator<String> it1 = all_food.iterator();
                 Iterator<String> it2 = all_exp.iterator();
                 Iterator<String> it3 = all_place.iterator();
                 Iterator<Integer> it4 = all_quantity.iterator();
                 while (it1.hasNext() && it2.hasNext()) {
-                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                             it3.next(), it4.next()));
                 }
 
@@ -182,17 +191,19 @@ public class FoodFragment extends Fragment{
                                 //Empty your list:
                                 allFoodList.clear();
                                 db = AppDatabase.getInstance(getContext());
+                                List<Long> all_ids = db.DAO().getId_byexp();
                                 List<String> all_food = db.DAO().getFood_byexp();
                                 List<String> all_exp = db.DAO().getExp_byexp();
                                 List<String> all_place = db.DAO().getPlace_byexp();
                                 List<Integer> all_quantity = db.DAO().getQuant_byexp();
                                 //Iterate though the food and expire date lists
+                                Iterator<Long> it0 = all_ids.iterator();
                                 Iterator<String> it1 = all_food.iterator();
                                 Iterator<String> it2 = all_exp.iterator();
                                 Iterator<String> it3 = all_place.iterator();
                                 Iterator<Integer> it4 = all_quantity.iterator();
                                 while (it1.hasNext() && it2.hasNext()) {
-                                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                                             it3.next(), it4.next()));
                                 }
                                 dialog.cancel();
@@ -205,17 +216,19 @@ public class FoodFragment extends Fragment{
                                 //Empty your list:
                                 allFoodList.clear();
                                 db = AppDatabase.getInstance(getContext());
+                                List<Long> all_ids = db.DAO().getId_byname();
                                 List<String> all_food = db.DAO().getFood_byname();
                                 List<String> all_exp = db.DAO().getExp_byname();
                                 List<String> all_place = db.DAO().getPlace_byname();
                                 List<Integer> all_quantity = db.DAO().getQuant_byname();
                                 //Iterate though the food and expire date lists
+                                Iterator<Long> it0 = all_ids.iterator();
                                 Iterator<String> it1 = all_food.iterator();
                                 Iterator<String> it2 = all_exp.iterator();
                                 Iterator<String> it3 = all_place.iterator();
                                 Iterator<Integer> it4 = all_quantity.iterator();
                                 while (it1.hasNext() && it2.hasNext()) {
-                                    allFoodList.add(new AllFood(it1.next(), it2.next(),
+                                    allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                                             it3.next(), it4.next()));
                                 }
                                 dialog.cancel();
@@ -231,23 +244,26 @@ public class FoodFragment extends Fragment{
                 ad.show();
             }});
 
+
         return view;
     }
 
     public List<AllFood> getAll(){
         List<AllFood> allFoodList = new ArrayList<>();
         db = AppDatabase.getInstance(getContext());
+        List<Long> all_ids = db.DAO().getIds();
         List<String> all_food = db.DAO().getFoodN();
         List<String> all_exp = db.DAO().getExp();
         List<String> all_place = db.DAO().getPlace();
         List<Integer> all_quantity = db.DAO().getQuant();
         //Iterate though the food and expire date lists
+        Iterator<Long> it0 = all_ids.iterator();
         Iterator<String> it1 = all_food.iterator();
         Iterator<String> it2 = all_exp.iterator();
         Iterator<String> it3 = all_place.iterator();
         Iterator<Integer> it4 = all_quantity.iterator();
         while (it1.hasNext() && it2.hasNext()) {
-            allFoodList.add(new AllFood(it1.next(), it2.next(),
+            allFoodList.add(new AllFood(it0.next(), it1.next(), it2.next(),
                     it3.next(), it4.next()));
         }
 

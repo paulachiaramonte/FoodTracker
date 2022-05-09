@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 
@@ -34,12 +35,6 @@ public class SettingsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
-        Context context = getContext();
-        assert context != null;
-        SharedPreferences sharedPref = context.getSharedPreferences(
-                getString(R.string.notifications_preferences),
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
 
         Switch switchNotification = view.findViewById(R.id.switchNotificatioms);
         Button FeedBackButton = view.findViewById(R.id.buttonFeedback);
@@ -48,7 +43,7 @@ public class SettingsFragment extends Fragment {
         switchNotification.setTextOn("On");
         switchNotification.setTextOff("Off");
 
-        switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+/*        switchNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // do something, the isChecked will be
                 // true if the switch is in the On position
@@ -57,7 +52,7 @@ public class SettingsFragment extends Fragment {
                 editor.commit();
                 Log.d("Key Value", getString(R.string.notifications_preferences));
             }
-        });
+        });*/
 
 
 
