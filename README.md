@@ -6,6 +6,9 @@ plan for every day and every meal. We can divide the main functionalities of the
 which are the Food Storage functionality, the Shopping List functionality and the Meal Plan functionality. 
 
 ### Food Storage
-![Captura de pantalla 2022-05-30 133014](https://user-images.githubusercontent.com/81173812/170983706-9c4eef52-c1e8-490f-81e8-6d44dd82f67d.png)
+![food_storage](https://user-images.githubusercontent.com/81173812/170983706-9c4eef52-c1e8-490f-81e8-6d44dd82f67d.png)
 
 ### Shopping List
+![shop_list](https://user-images.githubusercontent.com/81173812/170984268-8bd8c588-a1a9-4b19-bbaf-c27dc7f5c9b3.png)
+
+### Meal Plan
